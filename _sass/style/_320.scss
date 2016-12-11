@@ -1,0 +1,54 @@
+@media (min-width: 320px) {
+
+	html, body {
+	    font-family: sans, sans-serif, serif, MS sans, MS serif;
+	    background-color: $or-grey-01;
+	    font-size: 16px;
+	    line-height: 24px;
+	}
+
+	h1 { font-size: 32px; line-height: 47px;}
+	h2 { font-size: 28px; line-height: 40px;}
+	h3 { font-size: 24px; line-height: 36px;}
+	h4 { font-size: 17px; line-height: 32px;}
+	h5 { font-size: 17px; line-height: 28px;}
+	h6 { font-size: 16px; line-height: 28px;}
+
+
+	header {
+	    color: rgba(0, 0, 0, 0.87);
+	}
+
+	section {
+		background-color: $or-white-01;
+		border-radius: 4px;
+		@include boxShadow(0, 0, 6px, 1px, rgba(0,0,0,0.26));
+
+		h2 {
+			color: #FFAB40;
+		}
+
+		h3 {
+			color: #555555;
+			text-decoration: underline;
+		}
+	}
+	.scripture {
+	    color: rgba(0, 0, 0, 0.87);
+	    font-family: 'Great Vibes',script mt bold, script, cursive;
+	    font-size: 20px;
+	    line-height: 30px;
+	}
+
+	p.success {
+		color: #468847;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	p.error {
+		color: #F3493D;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}

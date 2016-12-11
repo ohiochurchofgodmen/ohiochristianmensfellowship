@@ -1,0 +1,73 @@
+@media (min-width: 320px) {
+
+	html, body {
+		position: relative;
+	    height: auto;
+	    padding: 0;
+	    margin: 0;
+	    overflow-x: hidden;
+	    text-align: center;
+	}
+
+	h1 ,h2, h3 ,h4, h5, h6 { margin: 0;}
+	
+	math {
+	    display:none;
+	}
+
+	ul, ol {
+	    margin: 0 0 10px 25px;
+	    padding: 0;
+	}
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	    display: block;
+	}
+
+	section {
+		width: 100%;
+		padding: 10px;
+		margin-top: 20px;
+		box-sizing: border-box;
+	}
+
+	p {
+		text-align: left;
+		margin-top: 10px;
+	}
+
+	.header-content-wrap {
+	    margin: 20px auto 0 auto;
+		padding: 0 16px;
+	}
+
+	.page {
+	    position: relative;
+	    margin: 10px auto 0 auto;
+	    padding: 0 16px;
+	}
+
+	img {
+		max-width: 100%;
+
+		&.logo {
+	    	display: block;
+	    	margin: 0 auto;
+		}
+	}
+
+	.scripture {
+	    margin-top: 20px;
+	    padding: 0 16px;
+	    text-align: center;
+	}
+
+	.coming-soon {
+		text-align:  center;
+		font-weight: bold;
+	}
+
+	.hidden {
+		display: none;
+	}
+}

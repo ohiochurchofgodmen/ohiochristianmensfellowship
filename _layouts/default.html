@@ -2,28 +2,32 @@
 <html>
 	<head>
 		<title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/css/site.css">
+		<link rel="stylesheet" type="text/css" href="/css/third-party/flexslider.min.css"/>
+
+		<script src="/js/common/lib/modernizr-2.8.3.min.js"></script>
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/activities">Activities</a></li>
-        		<li><a href="/speakers">Speakers</a></li>
-        		<li><a href="/registration">Registration</a></li>
-            <li><a href="/contactus">Contact Us</a></li>
-            <li><a href="/directions">Directions</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
+		<div class="menu-bar mobile">
+		    <span data-bind="click: $data.displayMenu" data-icon-list></span>
+		</div>
+
+		<div class="header-content-wrap">
+			{% include header.html %}
+		</div>
+
+		<div class="container page">
     		{{ content }}
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:ohiomensoxroast@gmail.com">email</a></li>
-        		<li><a href="https://github.com/ohiomensoxroast">github.com/ohiomensoxroast</a></li>
-			</ul>
-		</footer>
+		</div>
+		
+		{% include footer.html %}
+
+		<script src="/js/common/lib/jquery-1.10.2.min.js"></script>
+        <script src="/js/common/lib/knockout-3.1.0.js"></script>
+
+        <script src="/js/menubar.js"></script>
+	    <script src="/js/common/lib/jquery.flexslider-min.js"></script>
+	    <script src="/js/slide.min.js"></script>
 	</body>
 </html>
