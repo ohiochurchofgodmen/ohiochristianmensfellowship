@@ -34,7 +34,7 @@ const Header = (props) => (
 
       <img className={styles.logo} src={logo} alt="Ohio Men's Ox Roast and Retreat"/>
       <div className={`${grid.gc4} ${styles.title}`}>
-        <h2 className={styles.eventDate}>September 13th &amp; 14th</h2>
+        <h2 className={styles.eventDate}>September 6th &amp; 7th</h2>
         <h3 className={styles.eventTheme}>God make the impossible possible!</h3>
       </div>
       <Button to="/registration" className={styles.register} variant="contained"><Icon name="event" variant="dense"/>Register</Button>
