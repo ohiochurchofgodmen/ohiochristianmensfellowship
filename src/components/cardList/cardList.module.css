@@ -1,0 +1,26 @@
+.cardList {
+
+}
+
+.cardList > *:nth-child(-n+3) {
+    grid-row: 1;
+}
+
+.cardList > *:nth-child(n+4) {
+    grid-row: 2;
+}
+
+.cardList > *:nth-child(1),
+.cardList > *:nth-child(4) {
+    grid-column-start: 1;
+}
+
+.cardList > *:nth-child(2),
+.cardList > *:nth-child(5) {
+    grid-column-start: 25;
+}
+
+.cardList > *:nth-child(3),
+.cardList > *:nth-child(6) {
+    grid-column-start: 49;
+}

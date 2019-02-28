@@ -1,0 +1,106 @@
+@keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 4px 2px -2px rgba(33, 33, 33, .48);
+    color: var(--colors-primary-light);
+    outline: none;
+    overflow: hidden;
+    padding: 8px 16px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .32);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+.button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+.button.text,
+.button.outline {
+    box-shadow: none;
+}
+
+.button.contained {
+    background-color: var(--colors-primary-light);
+    border: 1px solid var(--colors-primary-light);
+    color: var(--colors-text-primary);
+}
+
+.button.outline {
+    border: 1px solid rgba(33, 33, 33, .38);
+}
+
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:focus,
+.button:hover:disabled,
+.button:focus:disabled {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--colors-text-secondary);
+    cursor: initial;
+    opacity: .38;
+}
+
+.button.contained:disabled,
+.button.contained:disabled:hover,
+.button.contained:disabled:focus,
+.button.contained:hover:disabled,
+.button.contained:focus:disabled  {
+    background-color: rgba(33, 33, 33, .38);
+    border: 1px solid rgba(33, 33, 33, 0);
+    box-shadow: none;
+    cursor: initial;
+}
+
+.button:hover {
+    background-color: rgba(255, 81, 49, .08);
+    cursor: pointer;
+}
+
+.button.contained:hover {
+    background-color: rgba(255, 81, 49, .96);
+    border: 1px solid rgba(255, 81, 49, .96);
+    box-shadow: 0 4px 8px rgba(33, 33, 33, .64);
+}
+
+.button:focus {
+    background-color: rgba(255, 81, 49, .24);
+}
+
+.button.contained:focus {
+    background-color: rgba(255, 81, 49, .88);
+    border: 1px solid rgba(255, 81, 49, .88);
+    box-shadow: 0 4px 2px -2px rgba(33, 33, 33, .48);
+}
+  
