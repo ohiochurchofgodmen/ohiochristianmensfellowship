@@ -59,14 +59,13 @@ const Speakers = () => (
                 </div>
                 <div className={`${styles.mediaImageDescription}`}>
                     <p>
-                        Dale Gruver's mission is to make disciples using the vehicle of music and the arts.
-                        An alumnus of Taylor University, Dale has served on staff in Ohio and Florida.
-                        Currently he is worship pastor at First Church of God, Greeneville, TN
-                        where he enjoy's sonwritting arranging and directing ensembles.
-                    </p>
-                    <p>
-                        Dales's wife Jill, and he have two children. Their son, Declan, is nine, and
-                        daughter, Nelly is seven. Dale and Jill are from New Bethleham, PA and still call Oakland COG home.
+                        Dale Gruver wears many hats in life—Husband, Dad, Son, Brother, Uncle, Preacher,
+                        Teacher, Songwriter, Worship Leader. Music has been a part of Dale's life since he was
+                        a young child. Studying at Taylor University and the University of Florida, his
+                        experience is diverse from ancient genres to modern. Dale has served as worship
+                        pastor at churches in Ohio, Florida and Tennessee and is the senior pastor at First
+                        Church of God, Alliance, OH. Dale and his wife, Jill, have two children, son, Declan,
+                        and daughter, Neely.
                     </p>
                 </div>
             </div>
