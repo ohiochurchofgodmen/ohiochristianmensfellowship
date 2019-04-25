@@ -5,8 +5,8 @@
 
 .mediaImage > img {
     box-shadow: 0 4px 8px rgba(33,33,33,.16), 0 4px 8px rgba(33,33,33,.24);
+    object-fit: contain;
     width: 100%;
-    height: 100%;
 }
 
 .mediaImageDescription {
