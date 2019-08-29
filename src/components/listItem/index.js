@@ -12,18 +12,15 @@ const ListItem = (props) => {
                 </Link>
             </li>
         );
-        
     } else {
         return (
             <li className={`${styles.item} ${grid.gc4}`}>
                 {props.children.map(child => {
-                    if (child.length) {
-                        return (
-                            <span>
-                                {child}
-                            </span>
-                        );
-                    }
+                    return (
+                        <span>
+                            {child}
+                        </span>
+                    );
                 })}
             </li>
         );

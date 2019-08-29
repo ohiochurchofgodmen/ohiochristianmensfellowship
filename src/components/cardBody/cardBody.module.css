@@ -1,0 +1,3 @@
+.cardBody > * {
+    grid-column: 2 / -2;
+}
