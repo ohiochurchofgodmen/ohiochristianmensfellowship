@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "../../components/link";
 import Layout from '../../layouts';
 import List from '../../components/list';
 import ListItem from '../../components/listItem';
