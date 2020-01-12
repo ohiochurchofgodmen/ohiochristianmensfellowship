@@ -26,7 +26,7 @@ const Layout = ({ children, data }) => (
       }
     `}
     render={data => (
-      <div className={grid.g}>
+      <div>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -39,7 +39,7 @@ const Layout = ({ children, data }) => (
         >
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </Helmet>
-        <Header className={grid.gc8} siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <main className={styles.main}>
           <div className={`${grid.g} ${styles.pageWrapper}`}>
             {children}

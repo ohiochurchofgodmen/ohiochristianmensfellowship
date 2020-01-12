@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Ohio Men's Ox Roast and Retreat",
-    description: "A two-day event in which Christian men gather in fellowship with one another to learn about Christ and His love for us. Register today to attend this event.",
+    title: "Ohio Christian Men's Fellowship",
+    description: "An event in which Christian men gather in fellowship with one another to learn about Christ and His love for us. Register today to attend this event.",
     keywords: "christ, christian, fellowship, spiritual, jesus, god, gather, ox, roast, love, event, powerful, fun, uplifting, men",
     language: "en",
     web_author: "Joshua Krumm",

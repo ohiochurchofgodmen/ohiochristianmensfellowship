@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "author": "Joshua Krumm <jskrumm@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.14.3",
-    "gatsby-plugin-manifest": "^2.2.9",
+    "gatsby": "^2.18.21",
+    "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.1.5",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.0",
-    "react-styleguidist": "^9.0.3",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-styleguidist": "^9.2.0",
     "typeface-roboto": "0.0.54"
   },
   "keywords": [
@@ -28,8 +28,8 @@
     "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3"
+    "gh-pages": "^2.2.0",
+    "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
