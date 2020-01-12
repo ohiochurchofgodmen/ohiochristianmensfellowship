@@ -7,6 +7,10 @@
     --colors-secondary-dark: #bfbfbf;
     --colors-text-primary: #fafafa;
     --colors-text-secondary: #212121;
+    --colors-blue: #4682B4;
+    --colors-alt-red: #E04836;
+    --colors-orange: #F39D41;
+    --colors-green: #AEBC21;
 
     /*
         https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=D50000&secondary.color=F2F2F2&secondary.text.color=212121&primary.text.color=FAFAFA 
@@ -21,7 +25,7 @@
 }
 
 body {
-    background-color: var(--colors-secondary);
+    background-color: var(--colors-text-primary);
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;

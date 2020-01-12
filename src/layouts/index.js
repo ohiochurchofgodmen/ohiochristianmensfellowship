@@ -45,9 +45,9 @@ const Layout = ({ children, data }) => (
             {children}
           </div>
         </main>
-        <Footer className={grid.gc4}>
-          <p>
-            {'Jesus replied, “What is impossible with man is possible with God.” ~ Luke 18:27'}
+        <Footer className={`${grid.gc4} ${styles.footer}`}>
+          <p className={styles.scripture}>
+            {'Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new.” ~ 2 Corinthians 5:17'}
           </p>
         </Footer>
       </div>

@@ -27,6 +27,10 @@ const Header = (props) => {
 
   return (
     <header className={`${styles.header} ${props.className}`}>
+      <div className={styles.bar1}></div>
+      <div className={styles.bar2}></div>
+      <div className={styles.bar3}></div>
+      <div className={styles.bar4}></div>
       <div className={navStyles.navBar}>
         <Button clickHandler={toggleNav}>
           <Icon name="menu"/>
@@ -46,7 +50,7 @@ const Header = (props) => {
           <Icon name="group"/>
           Speakers
         </Link>
-        <Link to="https://maps.google.com/maps?daddr=3480+Township+Road+221+Marengo,+OH+43334">
+        <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
           <Icon name="place"/>
           Directions
         </Link>
@@ -57,11 +61,9 @@ const Header = (props) => {
       </Nav>
       
 
-      <img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/>
-      <div className={`${styles.title}`}>
-        <h2 className={styles.eventDate}>September 6th &amp; 7th</h2>
-        <h3 className={styles.eventTheme}>God make the impossible possible!</h3>
-      </div>
+      <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
+      <h2 className={styles.eventHeader}>A New Begining</h2>
+      <h3 className={styles.eventThemeHeader}>September 12th 2020</h3>
       <Button to="/registration" className={styles.register} variant="contained"><Icon name="event" variant="dense"/>Register</Button>
     </header>
   );
