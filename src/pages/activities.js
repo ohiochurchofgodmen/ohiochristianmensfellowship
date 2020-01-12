@@ -18,7 +18,7 @@ const Activities = () => (
         <section className={grid.gc8}>
             <h4>Activities</h4>
             <p>
-                The Church of God Men's Ox Roast is a two day event, offering 
+                The Ohio Christian Men's Fellowship is an event, offering 
                 a variety of outdoor activities. There is something for everyone, from individual tournaments
                 to group competitions to activities just for fun. These events provide an opportunity to meet 
                 and socialize with other church members while enjoying the great outdoors.
@@ -67,7 +67,7 @@ const Activities = () => (
                         <span className="subTitle-1">{"Tournament"}</span>
                     </CardTitle>
                     <p>
-                        The golf tournament at the Ox Roast can be a great chance to get away from your work week and relax. 
+                        The golf tournament at the Ohio Christian Men's Fellowship can be a great chance to get away from your work week and relax. 
                         Join in with others to play 18-holes of golf. Swap golf tips and stories, as you play your way through 
                         a golf course that has something to offer every skill level.
                     </p>
@@ -80,7 +80,7 @@ const Activities = () => (
 						For more information or questions about this event you can call Les Bowers at <a href="tel:+15133200057">513-320-0057</a> or email him at <a href="mailto:webmaster@example.com">lbowers@cinci.rr.com</a>.
                     </p>
                     <hr/>
-                    <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/3005+Wilson+Rd,+Centerburg,+OH+43011/@40.3473787,-82.8429604,12z/data=!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x88384e4c26c6feb3:0x7bf893e63016f57b!2m2!1d-82.7049091!2d40.2899669">Get directions from the Ox Roast</a>
+                    {/* <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/3005+Wilson+Rd,+Centerburg,+OH+43011/@40.3473787,-82.8429604,12z/data=!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x88384e4c26c6feb3:0x7bf893e63016f57b!2m2!1d-82.7049091!2d40.2899669">Get directions from the Ox Roast</a> */}
                 </CardBody>
             </Card>
 
@@ -92,7 +92,7 @@ const Activities = () => (
                         <span className="subTitle-1">{"Tournament"}</span>
                     </CardTitle>
                     <p>
-                        The fishing tournament at the Ox Roast is fun for all ages. Lasting most of the first day, the tournament gives you plenty
+                        The fishing tournament at the Ohio Christian Men's Fellowship is fun for all ages. Lasting most of the first day, the tournament gives you plenty
                         of time to make memories with others who love fishing just as much as you. The tournament is for
                         catfish, but there are other fish in the ponds as well. So if you enjoy fishing for bass or blue gill, you can do that too. Take
                         advantage of this opportunity to reel in that big fish before the summer ends.
@@ -101,7 +101,7 @@ const Activities = () => (
                         Fishing is at the Oakland Park Conservation Club, 768 County Rd 26, Marengo, OH from 8am to 3pm Friday. For more information about this event you can call Carl Levine at <a href="tel:+19372320064">937-232-0064</a>.
                     </p>
                     <hr/>
-                    <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/oakland+conservation+club/@40.3929499,-82.8525466,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x8838549d56273403:0x9093edd7b07ef4fa!2m2!1d-82.8209804!2d40.3819498">Get directions from the Ox Roast</a>
+                    {/* <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/oakland+conservation+club/@40.3929499,-82.8525466,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x8838549d56273403:0x9093edd7b07ef4fa!2m2!1d-82.8209804!2d40.3819498">Get directions from the Ox Roast</a> */}
                 </CardBody>
             </Card>
 
@@ -112,7 +112,7 @@ const Activities = () => (
                     </CardTitle>
                     <p>
                         Archery tag is similar to dodgeball expect with bows and foam tipped arrows. This game is a lot of fun and we encourge you
-                        to try it out while you are at the Ox Roast.
+                        to try it out while you are at the Ohio Christian Men's Fellowship.
                     </p>
                     <p>
                         For more information about this event you can call John Trussell at <a href="tel:+19376814158">937-681-4158</a>.
@@ -127,7 +127,7 @@ const Activities = () => (
                         {"Cornhole"} 
                     </CardTitle>
                     <p>
-                        The cornhole boards at the Ox Roast are always setup and are a great way to meet others. Come enjoy this Midwest pastime, as you
+                        The cornhole boards at the Ohio Christian Men's Fellowship are always setup and are a great way to meet others. Come enjoy this Midwest pastime, as you
                         try to outscore your opponents. Young or old, this game is easy to learn and fun to play.
                     </p>
                     <p>
@@ -143,7 +143,7 @@ const Activities = () => (
                         {"Horseshoes"} 
                     </CardTitle>
                     <p>
-                        Horseshoes may seem similar to cornhole, but has its own skillset. At the Ox Roast, there are several horshoe pits for you to
+                        Horseshoes may seem similar to cornhole, but has its own skillset. At the Ohio Christian Men's Fellowship, there are several horshoe pits for you to
                         show off your skills or to learn how to play. There is also a viewing area where you can watch other horseshoers battle it out.
                     </p>
                     <p>
