@@ -6,7 +6,7 @@ module.exports = {
     language: "en",
     web_author: "Joshua Krumm",
     robots: "index, nofollow",
-    siteUrl: 'http://ohiocmf.com/'
+    siteUrl: 'http://ohiocmf.com/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,6 +23,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-cname',
   ],
   pathPrefix: "/ohiochristianmensfellowship",
 }
