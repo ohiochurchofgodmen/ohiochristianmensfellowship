@@ -6,7 +6,7 @@ module.exports = {
     language: "en",
     web_author: "Joshua Krumm",
     robots: "index, nofollow",
-    siteUrl: 'http://ohiocmf.com/',
+    siteUrl: 'https://ohiocmf.com/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
