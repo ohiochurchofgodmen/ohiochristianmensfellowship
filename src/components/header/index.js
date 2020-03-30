@@ -1,11 +1,11 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer } from 'react';
 import Nav from '../nav';
 import Link from '../link';
 import Button from '../button';
 import Icon from '../icon';
 import styles from "./header.module.css";
 import navStyles from "../nav/nav.module.css";
-import grid from "../../layouts/grid.module.css";
+// import grid from "../../layouts/grid.module.css";
 import logo from "../../images/logo.png";
 
 const reducer = (prevState, updatedProperty) => ({
