@@ -47,7 +47,7 @@ const Layout = ({ children, data }) => (
         </main>
         <Footer className={`${grid.gc4} ${styles.footer}`}>
           <p className={styles.scripture}>
-            {'Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new.” ~ 2 Corinthians 5:17'}
+            {`“Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17`}
           </p>
         </Footer>
       </div>

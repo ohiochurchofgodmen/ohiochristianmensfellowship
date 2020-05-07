@@ -63,7 +63,7 @@ const Header = (props) => {
 
       <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
       <h2 className={styles.eventHeader}>A New Begining</h2>
-      <h3 className={styles.eventThemeHeader}>September 12th 2020</h3>
+      <h3 className={styles.eventThemeHeader}>September 11th/12th 2020</h3>
       <Button to="/registration" className={styles.register} variant="contained"><Icon name="event" variant="dense"/>Register</Button>
     </header>
   );

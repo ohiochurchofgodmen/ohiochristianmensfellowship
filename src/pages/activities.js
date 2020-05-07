@@ -7,7 +7,6 @@ import Card from '../components/card';
 import CardTitle from '../components/cardTitle';
 import Media from '../components/media';
 import CardBody from '../components/cardBody';
-import golfImage from '../images/activities/golf/default.jpg';
 import fishingImage from '../images/activities/fishing/default.jpg';
 import cornholeImage from '../images/activities/cornhole/default.jpg';
 import horseshoesImage from '../images/activities/horseshoes/default.jpg';
@@ -24,9 +23,6 @@ const Activities = () => (
                 and socialize with other church members while enjoying the great outdoors.
             </p>
             <List>
-                <ListItem to="#golf" toText="More Info">
-                    Golf Tournament
-                </ListItem>
                 <ListItem to="#fishing" toText="More Info">
                     Fishing Tournament
                 </ListItem>
@@ -45,45 +41,12 @@ const Activities = () => (
             <h4>Other Activities</h4>
             <List>
                 <ListItem>
-                    {"Open swiming"}
-                    {"From 2pm to 6pm Friday and Saturday"}
-                </ListItem>
-                <ListItem>
-                    {"Climbing wall"}
-                    {"Available Friday and Saturday afternoon"}
-                </ListItem>
-                <ListItem>
                     {"Hiking"}
                     <></>
                 </ListItem>
             </List>
         </section>
         <CardList>
-            <Card id="golf">
-                <Media src={golfImage}/>
-                <CardBody>
-                    <CardTitle>
-                        {"Golf"} 
-                        <span className="subTitle-1">{"Tournament"}</span>
-                    </CardTitle>
-                    <p>
-                        The golf tournament at the Ohio Christian Men's Fellowship can be a great chance to get away from your work week and relax. 
-                        Join in with others to play 18-holes of golf. Swap golf tips and stories, as you play your way through 
-                        a golf course that has something to offer every skill level.
-                    </p>
-                    <p>
-                        Golf is played at Table Rock Golf Club located at 3005 Wilson Road, Centerburg, OH. and tees off at 8:30am Friday morning. 
-                        We welcome all golfers. Play is a 4-man scramble. If you do not have a team there are plenty of guys to team-up with. Register and we will place you on a team.
-						The cost is $45.00, this includes green fees, a cart, and buffet lunch. We need
-						to know the number of golfers for providing lunch and preparing carts. Proceeds from the tournament
-						benefit the scholarship fund.
-						For more information or questions about this event you can call Les Bowers at <a href="tel:+15133200057">513-320-0057</a> or email him at <a href="mailto:webmaster@example.com">lbowers@cinci.rr.com</a>.
-                    </p>
-                    <hr/>
-                    {/* <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/3005+Wilson+Rd,+Centerburg,+OH+43011/@40.3473787,-82.8429604,12z/data=!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x88384e4c26c6feb3:0x7bf893e63016f57b!2m2!1d-82.7049091!2d40.2899669">Get directions from the Ox Roast</a> */}
-                </CardBody>
-            </Card>
-
             <Card id="fishing">
                 <Media src={fishingImage}/>
                 <CardBody>
@@ -92,30 +55,16 @@ const Activities = () => (
                         <span className="subTitle-1">{"Tournament"}</span>
                     </CardTitle>
                     <p>
-                        The fishing tournament at the Ohio Christian Men's Fellowship is fun for all ages. Lasting most of the first day, the tournament gives you plenty
-                        of time to make memories with others who love fishing just as much as you. The tournament is for
-                        catfish, but there are other fish in the ponds as well. So if you enjoy fishing for bass or blue gill, you can do that too. Take
-                        advantage of this opportunity to reel in that big fish before the summer ends.
+                        The fishing tournament at the Ohio Christian Men's Fellowship is fun for all ages. 
+                        The tournament gives you time to make memories with others who love 
+                        fishing just as much as you. We will be fishing for catfish, bluegill, bass, etc. 
+                        Prizes will be given out at the tournament. There will also be open fishing for anyone on 
+                        during recreational time. So if you enjoy fishing, take advantage of this 
+                        opportunity to reel in that big fish before the summer ends.
                     </p>
                     <p>
-                        Fishing is at the Oakland Park Conservation Club, 768 County Rd 26, Marengo, OH from 8am to 3pm Friday. For more information about this event you can call Carl Levine at <a href="tel:+19372320064">937-232-0064</a>.
-                    </p>
-                    <hr/>
-                    {/* <a href="https://www.google.com/maps/dir/3480+Township+Rd+221,+Marengo,+OH+43334/oakland+conservation+club/@40.3929499,-82.8525466,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x883854dd9e5f65a5:0xfd23a360cc7498e8!2m2!1d-82.8561515!2d40.3949024!1m5!1m1!1s0x8838549d56273403:0x9093edd7b07ef4fa!2m2!1d-82.8209804!2d40.3819498">Get directions from the Ox Roast</a> */}
-                </CardBody>
-            </Card>
-
-            <Card id="archerytag">
-                <CardBody>
-                    <CardTitle>
-                        {"Archery Tag"} 
-                    </CardTitle>
-                    <p>
-                        Archery tag is similar to dodgeball expect with bows and foam tipped arrows. This game is a lot of fun and we encourge you
-                        to try it out while you are at the Ohio Christian Men's Fellowship.
-                    </p>
-                    <p>
-                        For more information about this event you can call John Trussell at <a href="tel:+19376814158">937-681-4158</a>.
+                        Fishing will take place at Camp Lebanon from 4 PM to 8 PM Friday. Open fishing will be on Saturday during recreational time.
+                        For more information about this event you can call Carl Levine at <a href="tel:+19372320064">937-232-0064</a>.
                     </p>
                 </CardBody>
             </Card>
