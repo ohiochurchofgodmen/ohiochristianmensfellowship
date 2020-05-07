@@ -42,15 +42,19 @@ const Activities = () => (
             <List>
                 <ListItem>
                     {"Paddle Boating"}
+                    <></>
                 </ListItem>
                 <ListItem>
                     {"Kayaking"}
+                    <></>
                 </ListItem>
                 <ListItem>
                     {"Frisbee Golf"}
+                    <></>
                 </ListItem>
                 <ListItem>
                     {"Hiking"}
+                    <></>
                 </ListItem>
             </List>
         </section>
