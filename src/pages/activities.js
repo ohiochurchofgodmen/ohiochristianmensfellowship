@@ -41,8 +41,16 @@ const Activities = () => (
             <h4>Other Activities</h4>
             <List>
                 <ListItem>
+                    {"Paddle Boating"}
+                </ListItem>
+                <ListItem>
+                    {"Kayaking"}
+                </ListItem>
+                <ListItem>
+                    {"Frisbee Golf"}
+                </ListItem>
+                <ListItem>
                     {"Hiking"}
-                    <></>
                 </ListItem>
             </List>
         </section>
@@ -76,12 +84,13 @@ const Activities = () => (
                         {"Cornhole"} 
                     </CardTitle>
                     <p>
-                        The cornhole boards at the Ohio Christian Men's Fellowship are always setup and are a great way to meet others. Come enjoy this Midwest pastime, as you
-                        try to outscore your opponents. Young or old, this game is easy to learn and fun to play.
+                        The cornhole boards at the Ohio Christian Men's Fellowship are always setup and are a great way to meet others. 
+                        Come enjoy this Midwest pastime, as you try to outscore your opponents. 
+                        Young or old, this game is easy to learn and fun to play.
                     </p>
                     <p>
-                        Cornhole tournament registration will begin Friday at 2pm with the tournament starting at 3pm. 
-                        For more information about this event you can call Dan Beckman at <a href="tel:+19376053811">937-605-3811</a>.
+                        Cornhole tournament registration will take place at registration tent when you arrive and the tournament on Saturday from 11:15 PM - 12:45 PM.
+                        For more information about this event you can call Chad Knight at <a href="mailto:chadlindleyknight@yahoo.com">chadlindleyknight@yahoo.com</a>.
                     </p>
                 </CardBody>
             </Card>
@@ -96,7 +105,8 @@ const Activities = () => (
                         show off your skills or to learn how to play. There is also a viewing area where you can watch other horseshoers battle it out.
                     </p>
                     <p>
-                        Horseshoes tournament reigistration will begin Friday at 11am with the tournament starting at noon on Friday.
+                        Horseshoes tournament reigistration will take place at registration tent when you arrive and the tournament on Saturday from 11:15 PM - 12:45 PM.
+                        For more information about this event you can call Fred O Davis at <a href="mailto:fredo5865@gmail.com">fredo5865@gmail.com</a>.
                     </p>
                 </CardBody>
             </Card>
