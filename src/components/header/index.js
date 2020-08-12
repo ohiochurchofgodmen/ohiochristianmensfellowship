@@ -5,7 +5,6 @@ import Button from '../button';
 import Icon from '../icon';
 import styles from "./header.module.css";
 import navStyles from "../nav/nav.module.css";
-// import grid from "../../layouts/grid.module.css";
 import logo from "../../images/logo.png";
 
 const reducer = (prevState, updatedProperty) => ({
@@ -58,9 +57,15 @@ const Header = (props) => {
           <Icon name="contact_support"/>
           Contact Us
         </Link>
+        <Link to={props.giveUrl}>
+          <Icon name="attach_money"/>
+          Give
+        </Link>
       </Nav>
       
-
+      <p className={styles.warning}>
+        Due to COVID-19, we understand any hesitation in purchasing tickets. We assure you that we are planning on having this year's event and will follow all state guidelines to keep everyone safe. If for some reason the event is canceled your money will be refunded back to you.
+      </p>
       <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
       <h2 className={styles.eventHeader}>A New Begining</h2>
       <h3 className={styles.eventThemeHeader}>September 11th/12th 2020</h3>

@@ -20,7 +20,8 @@ const Layout = ({ children, data }) => (
             keywords,
             language,
             web_author,
-            robots
+            robots,
+            donations,
           }
         }
       }
@@ -29,17 +30,19 @@ const Layout = ({ children, data }) => (
       <div>
         <Helmet
           title={data.site.siteMetadata.title}
+          htmlAttributes={{
+            lang: data.site.siteMetadata.language,
+          }}
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
             { name: 'keywords', content: data.site.siteMetadata.keywords },
-            { name: 'language', content: data.site.siteMetadata.language },
             { name: 'web_author', content: data.site.siteMetadata.web_author },
             { name: 'robots', content: data.site.siteMetadata.robots },
           ]}
         >
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} giveUrl={data.site.siteMetadata.donations}/>
         <main className={styles.main}>
           <div className={`${grid.g} ${styles.pageWrapper}`}>
             {children}
