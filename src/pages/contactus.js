@@ -4,7 +4,7 @@ import Layout from '../layouts';
 const ContactUs = () => (
 	<Layout>
 		<p>Under Construction</p>
-		<p>You can also email any quetions to ohiomensoxroast@gmail.com</p>
+		<p>You can also email any quetions to ohiocmf@gmail.com</p>
 	</Layout>
 );
 
