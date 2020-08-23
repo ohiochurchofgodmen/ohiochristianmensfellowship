@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{K2Fk:function(e,t,n){"use strict";n.r(t);var r=n("q1tI"),i=n.n(r),a=n("aArQ");t.default=function(){return i.a.createElement(a.a,null,i.a.createElement("iframe",{title:"registration",src:"https://ohiochristianmensfellowship.brushfire.com/events/465898?iframe=True",width:"100%",height:"300",style:{border:"none",margin:"auto"}}))}}}]);
+//# sourceMappingURL=component---src-pages-registration-js-bc63c4275df543f4ff6a.js.map

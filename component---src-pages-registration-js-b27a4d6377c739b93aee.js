@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{K2Fk:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("aArQ");n.default=function(){return l.a.createElement(r.a,null,l.a.createElement("br",null),l.a.createElement("p",null,"Comming Soon!"),l.a.createElement("br",null))}}}]);
-//# sourceMappingURL=component---src-pages-registration-js-b27a4d6377c739b93aee.js.map

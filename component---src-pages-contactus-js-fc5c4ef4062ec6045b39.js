@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{QooC:function(n,e,a){"use strict";a.r(e);var o=a("q1tI"),t=a.n(o),l=a("aArQ");e.default=function(){return t.a.createElement(l.a,null,t.a.createElement("p",null,"Under Construction"),t.a.createElement("p",null,"You can also email any quetions to ohiocmf@gmail.com"))}}}]);
+//# sourceMappingURL=component---src-pages-contactus-js-fc5c4ef4062ec6045b39.js.map
