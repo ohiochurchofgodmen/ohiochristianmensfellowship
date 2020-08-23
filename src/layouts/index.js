@@ -8,11 +8,17 @@ import "./base.css";
 import grid from "./grid.module.css";
 import styles from "./index.module.css";
 
-
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query pdfQueryAndSiteTitleQuery {
+        allPdf {
+          edges {
+            node {
+              content
+            }
+          }
+        }
         site {
           siteMetadata {
             title,
