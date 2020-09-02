@@ -34,5 +34,4 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-cname',
   ],
-  pathPrefix: "/ohiochristianmensfellowship",
 }
