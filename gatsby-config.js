@@ -33,6 +33,5 @@ module.exports = {
     `gatsby-transformer-pdf`,
     'gatsby-plugin-offline',
     'gatsby-plugin-cname',
-  ],
-  pathPrefix: "/ohiochristianmensfellowship",
+  ]
 }
