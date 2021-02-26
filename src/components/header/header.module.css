@@ -13,42 +13,6 @@
     position: relative;
 }
 
-.bar1 {
-    background-color: var(--colors-blue);
-    width: 14px;
-    height: 101.3%;
-    position: absolute;
-    right: 0;
-    z-index: 0;
-}
-
-.bar2 {
-    background-color: var(--colors-alt-red);
-    width: 14px;
-    height: 101.3%;
-    position: absolute;
-    right: 14px;
-    z-index: 0;
-}
-
-.bar3 {
-    background-color: var(--colors-orange);
-    width: 14px;
-    height: 101.3%;
-    position: absolute;
-    right: 28px;
-    z-index: 0;
-}
-
-.bar4{
-    background-color: var(--colors-green);
-    width: 14px;
-    height: 101.3%;
-    position: absolute;
-    right: 42px;
-    z-index: 0;
-}
-
 .logo,
 .register,
 .eventThemeHeader,
@@ -71,22 +35,16 @@
 .register {
     display: block;
     margin: 0 auto;
-    background-color: var(--colors-green) !important;
-    border-color: var(--colors-green) !important;
+    background-color: var(--colors-primary);
+    border-color: var(--colors-primary);
     width: 200px;
+    padding: 1rem;
     position: relative;
     bottom: -25px;
 }
 
 
 @media screen and (max-width: 599px) {
-    .bar1,
-    .bar2,
-    .bar3,
-    .bar4 {
-        display: none;
-    }
-
     .logo {
         width: 211.4px;
         height: 189.7px;
@@ -102,13 +60,6 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 719px) {
-    .bar1,
-    .bar2,
-    .bar3,
-    .bar4 {
-        display: block;
-    }
-
     .logo {
         width: 241.6px;
         height: 216.8px;

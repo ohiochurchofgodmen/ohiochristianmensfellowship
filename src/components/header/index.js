@@ -1,8 +1,8 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 import Nav from '../nav';
 import Link from '../link';
-import Button from '../button';
 import Icon from '../icon';
+import Button from '../button';
 import styles from "./header.module.css";
 import navStyles from "../nav/nav.module.css";
 import logo from "../../images/logo.png";
@@ -19,6 +19,7 @@ const initState = {
 const Header = (props) => {
 
   const [state, setState] = useReducer(reducer, initState);
+  const menuButtonRef = useRef(null); //TODO: handle closing menu when click happens outside it.
 
   const toggleNav = () => {
     setState({openNav: !state.openNav});
@@ -26,49 +27,47 @@ const Header = (props) => {
 
   return (
     <header className={`${styles.header} ${props.className}`}>
-      <div className={styles.bar1}></div>
-      <div className={styles.bar2}></div>
-      <div className={styles.bar3}></div>
-      <div className={styles.bar4}></div>
       <div className={navStyles.navBar}>
-        <Button clickHandler={toggleNav}>
+        <Button ref={menuButtonRef} id="menu-button" type="button" onClick={toggleNav} aria-haspopup="true"
+          aria-controls="main-nav">
           <Icon name="menu"/>
         </Button>
-      </div>
 
-      <Nav className={`${!!state.openNav ? navStyles.opened : navStyles.closed}`}>
-        <Link to="/">
-          <Icon name="home"/>
-          {props.siteTitle}
-        </Link>
-        <Link to="/activities">
-          <Icon name="local_activity"/>
-          Activities
-        </Link>
-        <Link to="/speakers">
-          <Icon name="group"/>
-          Speakers
-        </Link>
-        <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
-          <Icon name="place"/>
-          Directions
-        </Link>
-        <Link to="/contactus">
-          <Icon name="contact_support"/>
-          Contact Us
-        </Link>
-        <Link to={props.giveUrl}>
-          <Icon name="attach_money"/>
-          Give
-        </Link>
-      </Nav>
-      
-      <p className={styles.warning}>
+        <Nav id="main-nav" className={`${!!state.openNav ? navStyles.opened : navStyles.closed}`} label="Main Menu">
+          <Link to="/">
+            <Icon name="home"/>
+            {props.siteTitle}
+          </Link>
+          <Link to="/activities">
+            <Icon name="local_activity"/>
+            Activities
+          </Link>
+          <Link to="/speakers">
+            <Icon name="group"/>
+            Speakers
+          </Link>
+          <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
+            <Icon name="place"/>
+            Directions
+          </Link>
+          <Link to="/contactus">
+            <Icon name="contact_support"/>
+            Contact Us
+          </Link>
+          <Link to={props.giveUrl}>
+            <Icon name="attach_money"/>
+            Give
+          </Link>
+        </Nav>
+      </div>
+      {/* <p className={styles.warning}>
         Due to COVID-19, we understand any hesitation in purchasing tickets. We assure you that we are planning on having this year's event and will follow all state guidelines to keep everyone safe. If for some reason the event is canceled your money will be refunded back to you.
-      </p>
-      <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
-      <h2 className={styles.eventHeader}>A New Begining</h2>
-      <h3 className={styles.eventThemeHeader}>September 11th/12th 2020</h3>
+      </p> */}
+      <div className={styles.headingWrapper}>
+        <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
+        <h2 className={styles.eventHeader}>A New Begining</h2>
+        <h3 className={styles.eventThemeHeader}>September 10th &amp; 11th 2021</h3>
+      </div>
       <Button to="/registration" className={styles.register} variant="contained"><Icon name="event" variant="dense"/>Register</Button>
     </header>
   );

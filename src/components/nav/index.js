@@ -3,7 +3,7 @@ import styles from "./nav.module.css";
 
 const Nav = (props) => {
     return (
-        <nav className={`${styles.nav} ${props.className}`}>
+        <nav id={props.id} className={`${styles.nav} ${props.className}`} aria-label={props.label}>
             {props.children}
         </nav>
     );

@@ -14,11 +14,11 @@ const Button = (props) => {
 
     if (props.to && !props.disabled) {
         return (
-            <Link to={props.to} activeClassName={`${"button"} ${styles.button} ${variant} ${props.className}`} onClick={props.clickHandler}>{props.children}</Link>
+            <Link to={props.to} activeClassName={`${"button"} ${styles.button} ${variant} ${props.className}`} onClick={props.clickHandler} {...props}>{props.children}</Link>
         );
     } else {
         return (
-            <button className={`${styles.button} ${variant} ${props.className}`} type={props.type} value={props.value} onClick={props.clickHandler} disabled={props.disabled}>{props.children}</button>
+            <button className={`${styles.button} ${variant} ${props.className}`} type={props.type} value={props.value} onClick={props.clickHandler} disabled={props.disabled} {...props}>{props.children}</button>
         );
     }
 };

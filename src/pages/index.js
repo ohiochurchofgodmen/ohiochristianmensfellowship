@@ -10,10 +10,10 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<section className={grid.gc4}>
-				<button className={styles.scheduleButton} type="button" onClick={() => setShowSchedule(!showSchedule)}>{showSchedule ? "Hide 2020 Event Information/Schedule" : "Click to see 2020 Event Information/Schedule"}</button>
+				{/* <button className={styles.scheduleButton} type="button" onClick={() => setShowSchedule(!showSchedule)}>{showSchedule ? "Hide 2020 Event Information/Schedule" : "Click to see 2020 Event Information/Schedule"}</button>
 				{
 					showSchedule ? <iframe src={flyer} width="100%" height="1125px" allowtransparency="true" style={{background: "#FFFFFF"}} /> : ""
-				}
+				} */}
 				<h4>Our Story</h4>
 				<p>
 					When the Ohio Church of God Men&#39;s ministry began in 1976, the members had
