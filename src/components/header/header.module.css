@@ -7,7 +7,6 @@
 }
 
 .header {
-    background: var(--colors-secondary-light);
     display: inline-block;
     width: 100%;
     position: relative;

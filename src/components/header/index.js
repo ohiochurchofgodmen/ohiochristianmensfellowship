@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer } from 'react';
 import Nav from '../nav';
 import Link from '../link';
 import Icon from '../icon';
@@ -19,7 +19,6 @@ const initState = {
 const Header = (props) => {
 
   const [state, setState] = useReducer(reducer, initState);
-  const menuButtonRef = useRef(null); //TODO: handle closing menu when click happens outside it.
 
   const toggleNav = () => {
     setState({openNav: !state.openNav});
@@ -28,7 +27,7 @@ const Header = (props) => {
   return (
     <header className={`${styles.header} ${props.className}`}>
       <div className={navStyles.navBar}>
-        <Button ref={menuButtonRef} id="menu-button" type="button" onClick={toggleNav} aria-haspopup="true"
+        <Button id="menu-button" type="button" onClick={toggleNav} aria-haspopup="true"
           aria-controls="main-nav">
           <Icon name="menu"/>
         </Button>
