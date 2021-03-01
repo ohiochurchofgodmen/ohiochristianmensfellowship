@@ -3,22 +3,17 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Icon from '../components/icon';
+import Button from '../components/button';
 import 'typeface-roboto';
 import "./base.css";
 import grid from "./grid.module.css";
 import styles from "./index.module.css";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, showHeader }) => (
   <StaticQuery
     query={graphql`
-      query pdfQueryAndSiteTitleQuery {
-        allPdf {
-          edges {
-            node {
-              content
-            }
-          }
-        }
+      query siteTitleQuery {
         site {
           siteMetadata {
             title,
@@ -48,10 +43,13 @@ const Layout = ({ children }) => (
         >
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} giveUrl={data.site.siteMetadata.donations}/>
+        <Header show={showHeader} siteTitle={data.site.siteMetadata.title} giveUrl={data.site.siteMetadata.donations}/>
         <main className={styles.main}>
           <div className={`${grid.g} ${styles.pageWrapper}`}>
             {children}
+          </div>
+          <div className={styles.registerContainer}>
+            <Button to="/registration" className={styles.register} variant="contained"><Icon name="event" variant="dense"/>Register</Button>
           </div>
         </main>
         <Footer className={`${grid.gc4} ${styles.footer}`}>

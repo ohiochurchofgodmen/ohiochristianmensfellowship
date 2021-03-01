@@ -13,7 +13,7 @@ import horseshoesImage from '../images/activities/horseshoes/default.jpg';
 import grid from "../layouts/grid.module.css";
 
 const Activities = () => (
-    <Layout>
+    <Layout showHeader={false}>
         <section className={grid.gc8}>
             <h4>Activities</h4>
             <p>

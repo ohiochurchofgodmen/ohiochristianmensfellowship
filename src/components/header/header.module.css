@@ -7,13 +7,14 @@
 }
 
 .header {
+    background-color: var(--colors-primary-light);
+    color: var(--colors-text-primary);
     display: inline-block;
     width: 100%;
     position: relative;
 }
 
 .logo,
-.register,
 .eventThemeHeader,
 .eventHeader {
     text-align: center;
@@ -30,18 +31,6 @@
     display: block;
     margin: 0 auto;
 }
-
-.register {
-    display: block;
-    margin: 0 auto;
-    background-color: var(--colors-primary);
-    border-color: var(--colors-primary);
-    width: 200px;
-    padding: 1rem;
-    position: relative;
-    bottom: -25px;
-}
-
 
 @media screen and (max-width: 599px) {
     .logo {
@@ -74,6 +63,14 @@
 }
 
 @media screen and (min-width: 720px) and (max-width: 839px) {
+    /* .header {
+        height: 100vh;
+    }
+
+    .headingWrapper {
+        margin: auto;
+    } */
+
     .logo {
         width: 271.8px;
         height: 243.9px;
@@ -89,6 +86,14 @@
 }
 
 @media screen and (min-width: 840px) {
+    /* .header {
+        height: 100vh;
+    }
+
+    .headingWrapper {
+        margin: auto;
+    } */
+
     .eventHeader {
         font-size: 3.75rem;
     }

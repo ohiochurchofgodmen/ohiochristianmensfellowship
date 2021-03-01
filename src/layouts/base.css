@@ -26,6 +26,7 @@
 
 body {
     background-color: var(--colors-text-primary);
+    color: var(--colors-secondary);
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;

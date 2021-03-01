@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Layout from '../layouts';
 import grid from "../layouts/grid.module.css";
-import flyer from "../docs/2020 flyer.pdf"
-import styles from "./index.module.css";
+// import flyer from "../docs/2020 flyer.pdf"
+// import styles from "./index.module.css";
 
 const IndexPage = () => {
-	const [showSchedule, setShowSchedule] = useState(false);
+	// const [showSchedule, setShowSchedule] = useState(false);
 
 	return (
-		<Layout>
+		<Layout showHeader={true}>
 			<section className={grid.gc4}>
 				{/* <button className={styles.scheduleButton} type="button" onClick={() => setShowSchedule(!showSchedule)}>{showSchedule ? "Hide 2020 Event Information/Schedule" : "Click to see 2020 Event Information/Schedule"}</button>
 				{

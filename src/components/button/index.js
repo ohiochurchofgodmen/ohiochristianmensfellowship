@@ -14,7 +14,7 @@ const Button = (props) => {
 
     if (props.to && !props.disabled) {
         return (
-            <Link to={props.to} activeClassName={`${"button"} ${styles.button} ${variant} ${props.className}`} onClick={props.clickHandler} {...props}>{props.children}</Link>
+            <Link to={props.to} activeClassName={`${styles.button} ${variant} ${props.className}`} onClick={props.clickHandler} {...props}>{props.children}</Link>
         );
     } else {
         return (

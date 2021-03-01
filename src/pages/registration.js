@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../layouts';
 
 const Registration = () => (
-    <Layout>
+    <Layout showHeader={false}>
         <iframe 
             title="registration"
             src='https://ohiochristianmensfellowship.brushfire.com/events/465898?iframe=True' 

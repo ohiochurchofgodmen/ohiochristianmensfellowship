@@ -9,7 +9,7 @@ import musicImage from "../../images/music/2020/SOQT.jpeg";
 // import placeholderImage from "../../images/placeholder-person.png"
 
 const Speakers = () => (
-    <Layout>
+    <Layout showHeader={false}>
         <section className={grid.gc8}>
             <div className={grid.gc4}>
                 <h4>2020 Speaker</h4>
