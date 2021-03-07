@@ -77,15 +77,19 @@ const Header = (props) => {
     {/* <p className={styles.warning}>
       Due to COVID-19, we understand any hesitation in purchasing tickets. We assure you that we are planning on having this year's event and will follow all state guidelines to keep everyone safe. If for some reason the event is canceled your money will be refunded back to you.
     </p> */}
-    {props.show ?
-      <div className={styles.headingWrapper}>
-        <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
-        <h2 className={styles.eventHeader}>A New Begining</h2>
-        <h3 className={styles.eventThemeHeader}>September 10th &amp; 11th 2021</h3>
+    <div className={styles.headingWrapper}>
+      <div className={styles.innerHeadingWrapper}>
+      <h1><img className={styles.logo} src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
+      {props.show ?
+          <>
+            <h2 className={styles.eventHeader}>A New Begining</h2>
+            <h3 className={styles.eventThemeHeader}>September 10th &amp; 11th 2021</h3>
+          </>
+      :
+        ""
+      }
       </div>
-    :
-      ""
-    }
+    </div>
   </header>
   );
 };

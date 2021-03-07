@@ -17,10 +17,21 @@
 
 .registerContainer {
     position: fixed;
-    background: grey;
+    background: var(--colors-secondary-light);
     width: 100%;
     bottom: 0;
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
+}
+
+.register {
+    background-color: var(--colors-primary);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: var(--colors-text-primary);
+    margin: 1rem;
 }

@@ -8,10 +8,35 @@
 
 .header {
     background-color: var(--colors-primary-light);
+    background: url("../../images/2020_event.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: var(--colors-text-primary);
     display: inline-block;
     width: 100%;
     position: relative;
+}
+
+.header::before {
+    content:'';
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    position: absolute;
+    background-color: var(--colors-secondary);
+}
+
+.headingWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.innerHeadingWrapper {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
 }
 
 .logo,
@@ -63,13 +88,9 @@
 }
 
 @media screen and (min-width: 720px) and (max-width: 839px) {
-    /* .header {
+    .headingWrapper {
         height: 100vh;
     }
-
-    .headingWrapper {
-        margin: auto;
-    } */
 
     .logo {
         width: 271.8px;
@@ -86,13 +107,9 @@
 }
 
 @media screen and (min-width: 840px) {
-    /* .header {
+    .headingWrapper {
         height: 100vh;
     }
-
-    .headingWrapper {
-        margin: auto;
-    } */
 
     .eventHeader {
         font-size: 3.75rem;

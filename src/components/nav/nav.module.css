@@ -1,7 +1,7 @@
 
 .navBar {
-    background-color: var(--colors-primary);
-    border: 1px solid var(--colors-primary);
+    background-color: var(--colors-primary-light);
+    border: 1px solid var(--colors-primary-light);
     box-shadow: 0 4px 8px rgba(33, 33, 33, .64);
     z-index: 6;
     position: relative;
@@ -44,6 +44,10 @@
     display: block;
 }
 
+.nav .material-icons {
+    color: var(--colors-secondary-light);
+}
+
 @media screen and (min-width: 720px) and (max-width: 839px) {
     .navBar button {
         display: none;
@@ -51,7 +55,7 @@
 
     .nav {
         background-color: var(--colors-primary-light);
-        border: 1px solid var(--colors-primary);
+        border: 1px solid var(--colors-primary-light);
         box-shadow: 0 4px 8px rgba(33, 33, 33, .64);
         position: relative;
         flex-direction: row;
@@ -74,7 +78,7 @@
 
     .nav {
         background-color: var(--colors-primary-light);
-        border: 1px solid var(--colors-primary);
+        border: 1px solid var(--colors-primary-light);
         box-shadow: 0 4px 8px rgba(33, 33, 33, .64);
         position: relative;
         flex-direction: row;
