@@ -1,4 +1,7 @@
-:root {
+body {
+    margin: 0;
+}
+/* :root {
     --colors-primary: #2d7436;
     --colors-primary-light: #5da361;
     --colors-primary-dark: #00470d;
@@ -11,10 +14,6 @@
     --colors-alt-red: #E04836;
     --colors-orange: #F39D41;
     --colors-green: #AEBC21;
-
-    /*
-        https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=D50000&secondary.color=F2F2F2&secondary.text.color=212121&primary.text.color=FAFAFA 
-    */
 
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
@@ -116,4 +115,4 @@ caption, figcaption, .caption {
     font-size: 0.625rem;
     letter-spacing: 0.015rem;
     text-transform: uppercase;
-}
+} */
