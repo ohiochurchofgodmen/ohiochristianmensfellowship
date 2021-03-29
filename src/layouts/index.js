@@ -1,18 +1,14 @@
 import React from 'react';
-import { Grommet, Footer, Text, Main, Header, Menu, Nav, ResponsiveContext, Box, Sidebar, Collapsible, Layer } from 'grommet';
+import { Grommet, Footer, Text, Main, Header, Nav, ResponsiveContext, Box, Layer, Button, Image, Stack, Heading } from 'grommet';
+import { Home as HomeIcon , Menu as MenuIcon, Attraction as AttractionIcon, Group as GroupIcon, Directions as DirectionsIcon, Contact as ContactIcon, Currency as CurrencyIcon} from 'grommet-icons';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Link from '../components/link';
-// import Header from '../components/header';
-// import Footer from '../components/footer';
-import Icon from '../components/icon';
-import Button from '../components/button';
-// import 'typeface-roboto';
-import "./base.css";
-// import styles from "./index.module.css";
 import logo from "../images/logo.png";
+import mastHeadImg from '../images/2020_event.jpg';
 
+//Can't import theme
 const theme = {
   "name": "ohiocmf",
   "rounding": 4,
@@ -74,8 +70,8 @@ const theme = {
       "graph-1": "status-warning"
     },
     "font": {
-      "family": "",
-      "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0370-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n",
+      "family": "\"Roboto\"",
+      "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0370-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n\n/* cyrillic-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0370-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n",
       "size": "18px",
       "height": "24px",
       "maxWidth": "432px"
@@ -461,6 +457,35 @@ const theme = {
 const Layout = ({ children, showHeader }) => {
   const [openNav, setOpenNav] = React.useState();
 
+  const MainNav = ({data, direction}) => (
+    <Nav direction={direction}>
+      <Link to="/">
+        <HomeIcon/>
+        <Text margin="0 10px">{data.title}</Text>
+      </Link>
+      <Link to="/activities">
+        <AttractionIcon />
+        <Text margin="0 10px">Activities</Text>
+      </Link>
+      <Link to="/speakers">
+        <GroupIcon />
+        <Text margin="0 10px">Speakers</Text>
+      </Link>
+      <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
+        <DirectionsIcon/>
+        <Text margin="0 10px">Directions</Text>
+      </Link>
+      <Link to="/contactus">
+        <ContactIcon />
+        <Text margin="0 10px">Contact Us</Text>
+      </Link>
+      <Link to={data.donations}>
+        <CurrencyIcon/>
+        <Text margin="0 10px">Give</Text>
+      </Link>
+    </Nav>
+  );
+
   return (
     <StaticQuery
       query={graphql`
@@ -479,7 +504,7 @@ const Layout = ({ children, showHeader }) => {
         }
       `}
       render={data => (
-        <Grommet theme={theme}>
+        <Grommet theme={theme} cssVars full themeMode="light">
           <Helmet
             title={data.site.siteMetadata.title}
             htmlAttributes={{
@@ -494,144 +519,76 @@ const Layout = ({ children, showHeader }) => {
           >
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
           </Helmet>
-          {/* <Header show={showHeader} siteTitle={data.site.siteMetadata.title} giveUrl={data.site.siteMetadata.donations}/> */}
           <Header background="brand" pad="medium">
             <ResponsiveContext.Consumer>
               {responsive =>
                 responsive === 'small' ? (
-                  <Button id="menu-button" type="button" onClick={() => setOpenNav(!openNav)}><Icon name="menu"/></Button>
-                  // <Menu
-                  //   a11yTitle="Navigation Menu"
-                  //   icon={<Button id="menu-button" type="button"><Icon name="menu"/></Button>}
-                  //   items={[
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to="/"><Icon name="home"/>{data.site.siteMetadata.title}</Link></Box>,
-                  //     },
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to="/activities"><Icon name="local_activity"/>Activities</Link></Box>,
-                  //     },
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to="/speakers"><Icon name="group"/>Speakers</Link></Box>,
-                  //     },
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831"><Icon name="place"/>Directions</Link></Box>,
-                  //     },
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to="/contactus"><Icon name="contact_support"/>Contact Us</Link></Box>,
-                  //     },
-                  //     {
-                  //       label: <Box alignSelf="center"><Link to={data.site.siteMetadata.donations}><Icon name="attach_money"/>Give</Link></Box>,
-                  //     },
-                  //   ]}
-                  ///>
+                  <Button onClick={() => setOpenNav(!openNav)}><MenuIcon name="menu"/></Button>
                 ) : (
-                  <Nav direction="row">
-                    <Link to="/">
-                      <Icon name="home"/>
-                      {data.site.siteMetadata.title}
-                    </Link>
-                    <Link to="/activities">
-                      <Icon name="local_activity"/>
-                      Activities
-                    </Link>
-                    <Link to="/speakers">
-                      <Icon name="group"/>
-                      Speakers
-                    </Link>
-                    <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
-                      <Icon name="place"/>
-                      Directions
-                    </Link>
-                    <Link to="/contactus">
-                      <Icon name="contact_support"/>
-                      Contact Us
-                    </Link>
-                    <Link to={data.site.siteMetadata.donations}>
-                      <Icon name="attach_money"/>
-                      Give
-                    </Link>
-                  </Nav>
+                  <MainNav data={data.site.siteMetadata} direction="row"/>
                 )
               }
             </ResponsiveContext.Consumer>
           </Header>
-          <Main flex direction="row">
-            <Box flex align="center" justify="center" pad="small">
-              {/* <p className={styles.warning}>
-                Due to COVID-19, we understand any hesitation in purchasing tickets. We assure you that we are planning on having this year's event and will follow all state guidelines to keep everyone safe. If for some reason the event is canceled your money will be refunded back to you.
-              </p> */}
-              <Box>
-                <Box>
-                <h1><img src={logo} alt="Ohio Christian Men's Fellowship"/></h1>
-                {showHeader ?
-                    <>
-                      <h2>A New Begining</h2>
-                      <h3>September 10th &amp; 11th 2021</h3>
-                    </>
-                :
-                  ""
+          <Main>
+            <Stack anchor="center">
+              <Image src={mastHeadImg} fill/>
+              <Box align="center" pad="none" width="100vw">
+                <Heading level="1" margin="0">
+                  <Box align="center" >
+                    <Image src={logo} alt="Ohio Christian Men's Fellowship" width="75%"/>
+                  </Box>
+                </Heading>
+                {showHeader &&
+                  <>
+                    <Heading level="2" margin="0" color="light-1">A New Begining</Heading>
+                    <Heading level="3" margin="0" color="light-1">September 10th &amp; 11th 2021</Heading>
+                  </>
                 }
-                </Box>
               </Box>
+            </Stack>
+            <Box justify="center" pad="20px" height={{"min": "unset"}} width={{"min": "unset"}}>
               {children}
             </Box>
-            {/* <Collapsible direction="horizontal" open={openNav}> */}
-            { openNav && (
-                <Layer
-                  onEsc={() => setOpenNav(false)}
-                  onClickOutside={() => setOpenNav(false)}
-                  position="left"
-                  animate
-                  modal={false}
-                  responsive={false}
-                >
-                  <Box
-                    flex
-                    width="medium"
-                    background="light-2"
-                    pad="large"
-                    elevation="xlarge"
-                    height={{"min": "100vh"}}
+              { openNav && 
+                (
+                  <Layer
+                    onEsc={() => setOpenNav(false)}
+                    onClickOutside={() => setOpenNav(false)}
+                    position="left"
+                    animation="slide"
+                    modal={true}
+                    responsive={false}
+                    full="vertical"
                   >
-                    <Nav>
-                      <Link to="/">
-                        <Icon name="home"/>
-                        {data.site.siteMetadata.title}
-                      </Link>
-                      <Link to="/activities">
-                        <Icon name="local_activity"/>
-                        Activities
-                      </Link>
-                      <Link to="/speakers">
-                        <Icon name="group"/>
-                        Speakers
-                      </Link>
-                      <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
-                        <Icon name="place"/>
-                        Directions
-                      </Link>
-                      <Link to="/contactus">
-                        <Icon name="contact_support"/>
-                        Contact Us
-                      </Link>
-                      <Link to={data.site.siteMetadata.donations}>
-                        <Icon name="attach_money"/>
-                        Give
-                      </Link>
-                    </Nav>
-                  </Box>
+                    <Box
+                      flex
+                      width="300px"
+                      background="light-2"
+                      pad="large"
+                      elevation="xlarge"
+                    >
+                      <MainNav data={data.site.siteMetadata} direction="column"/>
+                    </Box>
                   </Layer>
                 )
               }
-            {/* </Collapsible> */}
-            
-            {/* <div>
-              <Button to="/registration" variant="contained"><Icon name="event" variant="dense"/>Register</Button>
-            </div> */}
+            {/* <Layer
+              open
+              position="bottom"
+              modal={false}
+              responsive={false}
+              full="horizontal"
+              background="brand"
+            >
+              <Box flex align="center" justify="center">
+                <Link to="/registration">Register</Link>
+              </Box>
+            </Layer> */}
           </Main>
           <Footer background="brand" pad="medium">
             <Text>
-              {`“Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17`}
+              Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17
             </Text>
           </Footer>
         </Grommet>
