@@ -3,6 +3,7 @@ import { Grommet, Footer, Text, Main, Header, Nav, ResponsiveContext, Box, Layer
 import { Home as HomeIcon , Menu as MenuIcon, Attraction as AttractionIcon, Group as GroupIcon, Directions as DirectionsIcon, Contact as ContactIcon, Currency as CurrencyIcon} from 'grommet-icons';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from "styled-components";
 
 import Link from '../components/link';
 import logo from "../images/logo.png";
@@ -454,35 +455,53 @@ const theme = {
   "scale": 1
 };
 
+const StyledNavLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 20px;
+  ${({theme}) => `
+    :hover,
+    :active {
+      border-bottom: 1px solid ${theme.global.colors.brand.light}
+    }
+  `}
+`;
+
+const StyledNavText = styled(Text)`
+  position: relative;
+  top: -4px;
+  margin: 0 10px;
+`;
+
 const Layout = ({ children, showHeader }) => {
   const [openNav, setOpenNav] = React.useState();
 
   const MainNav = ({data, direction}) => (
-    <Nav direction={direction}>
-      <Link to="/">
-        <HomeIcon/>
-        <Text margin="0 10px">{data.title}</Text>
-      </Link>
-      <Link to="/activities">
-        <AttractionIcon />
-        <Text margin="0 10px">Activities</Text>
-      </Link>
-      <Link to="/speakers">
-        <GroupIcon />
-        <Text margin="0 10px">Speakers</Text>
-      </Link>
-      <Link to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
-        <DirectionsIcon/>
-        <Text margin="0 10px">Directions</Text>
-      </Link>
-      <Link to="/contactus">
-        <ContactIcon />
-        <Text margin="0 10px">Contact Us</Text>
-      </Link>
-      <Link to={data.donations}>
-        <CurrencyIcon/>
-        <Text margin="0 10px">Give</Text>
-      </Link>
+    <Nav direction={direction} fill>
+      <StyledNavLink to="/">
+        <HomeIcon color="brand"/>
+        <StyledNavText>Home</StyledNavText>
+      </StyledNavLink>
+      <StyledNavLink to="/activities">
+        <AttractionIcon color="brand"/>
+        <StyledNavText>Activities</StyledNavText>
+      </StyledNavLink>
+      <StyledNavLink to="/speakers">
+        <GroupIcon color="brand" />
+        <StyledNavText>Speakers</StyledNavText>
+      </StyledNavLink>
+      <StyledNavLink to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
+        <DirectionsIcon color="brand"/>
+        <StyledNavText>Directions</StyledNavText>
+      </StyledNavLink>
+      <StyledNavLink to="/contactus">
+        <ContactIcon color="brand"/>
+        <StyledNavText>Contact Us</StyledNavText>
+      </StyledNavLink>
+      <StyledNavLink to={data.donations}>
+        <CurrencyIcon color="brand"/>
+        <StyledNavText>Give</StyledNavText>
+      </StyledNavLink>
     </Nav>
   );
 
@@ -519,11 +538,11 @@ const Layout = ({ children, showHeader }) => {
           >
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
           </Helmet>
-          <Header background="brand" pad="medium">
+          <Header background="dark-1" pad="medium">
             <ResponsiveContext.Consumer>
               {responsive =>
                 responsive === 'small' ? (
-                  <Button onClick={() => setOpenNav(!openNav)}><MenuIcon name="menu"/></Button>
+                  <Button onClick={() => setOpenNav(!openNav)}><MenuIcon name="menu" color="brand"/></Button>
                 ) : (
                   <MainNav data={data.site.siteMetadata} direction="row"/>
                 )
@@ -531,7 +550,9 @@ const Layout = ({ children, showHeader }) => {
             </ResponsiveContext.Consumer>
           </Header>
           <Main>
-            <Stack anchor="center">
+            <Stack anchor="center" margin={{
+              "bottom": "-6px"
+            }}>
               <Image src={mastHeadImg} fill/>
               <Box align="center" pad="none" width="100vw">
                 <Heading level="1" margin="0">
@@ -547,7 +568,7 @@ const Layout = ({ children, showHeader }) => {
                 }
               </Box>
             </Stack>
-            <Box justify="center" pad="20px" height={{"min": "unset"}} width={{"min": "unset"}}>
+            <Box align="center" justify="center" height={{"min": "unset"}} width={{"min": "unset"}}>
               {children}
             </Box>
               { openNav && 
@@ -564,9 +585,9 @@ const Layout = ({ children, showHeader }) => {
                     <Box
                       flex
                       width="300px"
-                      background="light-2"
                       pad="large"
                       elevation="xlarge"
+                      background="dark-1"
                     >
                       <MainNav data={data.site.siteMetadata} direction="column"/>
                     </Box>

@@ -1,20 +1,20 @@
 import React from "react";
-import { Paragraph } from 'grommet';
-import Layout from '../../layouts';
-import speakerImage from "../../images/speakers/2020/dr-mark-jackson.png";
-import musicImage from "../../images/music/2020/SOQT.jpeg";
+import { Paragraph, Heading, Box, List, Text, Image } from 'grommet';
+import Layout from '../layouts';
+import speakerImage from "../images/speakers/2020/dr-mark-jackson.png";
+import musicImage from "../images/music/2020/SOQT.jpeg";
 // import placeholderImage from "../../images/placeholder-person.png"
 
 const Speakers = () => (
     <Layout showHeader={false}>
-        <section>
-            <div>
-                <h4>2020 Speaker</h4>
-                <h5>Dr. Mark R. Jackson</h5>
-                <div>
-                    <img src={speakerImage} alt="Dr. Mark R. Jackson" className="current-speaker"/>
-                </div>
-                <div>
+        <Box as="section">
+            <Box>
+                <Heading level="4">2020 Speaker</Heading>
+                <Heading level="5">Dr. Mark R. Jackson</Heading>
+                <Box>
+                    <Image src={speakerImage} alt="Dr. Mark R. Jackson" className="current-speaker"/>
+                </Box>
+                <Box>
                     <Paragraph>
                         Dr. Mark Jackson is the Lead Pastor of Towne Church in Middletown, Ohio. 
                         He has served in this role since 2016. Altogether, he has served in pastoral ministry for 
@@ -37,16 +37,16 @@ const Speakers = () => (
                         He is committed to mentoring young men who feel called into the ministry. 
                         For recreation, he enjoys reading, watching sports, and spending time with his family. 
                         He and his wife Jenny have three children, Graham, Savannah, and Ally.  
-                </div>
-            </div>
+                </Box>
+            </Box>
             <hr/>
-            <div>
-                <h4>2020 Music/Worship</h4>
-                <h5>Sould Out Quartet</h5>
-                <div>
-                    <img src={musicImage} alt="Sould Out Quartet" className="current-special-music" />
-                </div>
-                <div>
+            <Box>
+                <Heading level="4">2020 Music/Worship</Heading>
+                <Heading level="5">Sould Out Quartet</Heading>
+                <Box>
+                    <Image src={musicImage} alt="Sould Out Quartet" className="current-special-music" />
+                </Box>
+                <Box>
                     <Paragraph>
                         In May of 2004, in answer to God's call on his life, Matt Rankin of Georgetown, Ohio 
                         started a journey to find men of kindred spirits and equal yoking to partner with him 
@@ -68,28 +68,22 @@ const Speakers = () => (
                         light to the world and ambassadors for Christ, that we are each called to be and to exhort 
                         God's people to be servants with hearts on fire! 
                     </Paragraph>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h4>Future Speakers/Music</h4>
+                </Box>
+            </Box>
+        </Box>
+        <Box as="section">
+            <Heading level="4">Future Speakers/Music</Heading>
 
-            <h5>2021</h5>
-            {/* <List>
-                <ListItem>
-                    {"Dates: TBD"}
-                    <></>
-                </ListItem>
-                <ListItem>
-                    {"Speaker: TBD"}
-                    <></>
-                </ListItem>
-                <ListItem>
-                    {"Music/Worship: TBD"}
-                    <></>
-                </ListItem>
-            </List> */}
-        </section>
+            <Heading level="5">2021</Heading>
+            <List
+                primaryKey="name"
+                data={[
+                    { name: <Text>Dates: TBD</Text> },
+                    { name: <Text>Speaker: TBD</Text>},
+                    { name: <Text>Music/Worship: TBD</Text> },
+                ]}
+            />
+        </Box>
     </Layout>
 );
 
