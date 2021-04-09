@@ -570,6 +570,9 @@ const Layout = ({ children, showHeader }) => {
             </Stack>
             <Box align="center" justify="center" height={{"min": "unset"}} width={{"min": "unset"}}>
               {children}
+              <Text>
+                Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17
+              </Text>
             </Box>
               { openNav && 
                 (
@@ -607,10 +610,8 @@ const Layout = ({ children, showHeader }) => {
               </Box>
             </Layer> */}
           </Main>
-          <Footer background="brand" pad="medium">
-            <Text>
-              Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17
-            </Text>
+          <Footer background="dark-1" pad="medium">
+
           </Footer>
         </Grommet>
       )}

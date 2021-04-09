@@ -9,9 +9,11 @@ const IndexPage = () => {
 			query={graphql`
 			query testimonialsQuery {
 				site {
-					testimonials {
-						author
-						quote
+					siteMetadata {
+						testimonials {
+							author
+							quote
+						}
 					}
 				}
 			}
@@ -20,7 +22,7 @@ const IndexPage = () => {
 				<Layout showHeader>
 					<Box forwadedAs="section" height="medium" overflow="hidden" background="dark-1" pad="20px" fill="horizontal">
 						<Carousel fill controls="arrows" play={8000}>
-							{data.site.testimonials.map((testimony) => (
+							{data.site.siteMetadata.testimonials.map((testimony) => (
 								<Box width="medium" alignSelf="center">
 									<Paragraph margin={{
 										left: "28px",
