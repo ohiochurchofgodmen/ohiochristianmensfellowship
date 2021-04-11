@@ -9,11 +9,9 @@ const IndexPage = () => {
 			query={graphql`
 			query allTestimonialsQuery {
 				allTestimonialsJson {
-					edges {
-						node {
-							author
-							quote
-						}
+					nodes {
+					  author
+					  quote
 					}
 				}
 			}
@@ -22,7 +20,7 @@ const IndexPage = () => {
 				<Layout showHeader>
 					<Box forwadedAs="section" height="medium" overflow="hidden" background="dark-1" pad="20px" fill="horizontal">
 						<Carousel fill controls="arrows" play={8000}>
-							{data.site.siteMetadata.testimonials.map((testimony) => (
+							{data.allTestimonialsJson.nodes.map((testimony) => (
 								<Box width="medium" alignSelf="center">
 									<Paragraph margin={{
 										left: "28px",
