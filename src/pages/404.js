@@ -1,14 +1,18 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Paragraph, Heading, Box, Button} from 'grommet';
+import { navigate } from 'gatsby';
 import Layout from '../layouts/index';
 
 const NotFoundPage = () => (
   <Layout showHeader={false}>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist.</p>
-      <Link to="/">Go to home page!</Link>
-    </div>
+    <Box>
+      <Heading level="h1">NOT FOUND</Heading>
+      <Paragraph>You just hit a route that doesn&#39;t exist.</Paragraph>
+      <Button onClick={(e) => {
+        e.preventDefault();
+        navigate("/");
+      }}>Go to home page!</Button>
+    </Box>
   </Layout>
 );
 

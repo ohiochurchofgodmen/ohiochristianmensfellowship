@@ -1,7 +1,6 @@
 import React from 'react';
-import { Paragraph, Heading, Box, List, Text, Card, CardHeader, CardBody, Image } from 'grommet';
+import { Paragraph, Heading, Box, List, Text, Card, CardHeader, CardBody, Image, Accordion, AccordionPanel, Stack } from 'grommet';
 import Layout from '../layouts';
-import Link from '../components/link';
 import fishingImage from '../images/activities/fishing/default.jpg';
 import cornholeImage from '../images/activities/cornhole/default.jpg';
 import horseshoesImage from '../images/activities/horseshoes/default.jpg';
@@ -9,26 +8,15 @@ import horseshoesImage from '../images/activities/horseshoes/default.jpg';
 const Activities = () => (
     <Layout showHeader={false}>
         <Box align="center" pad="small">
-            <Box width="100%">
-                <Heading level="4">Activities</Heading>
-                <Paragraph>
-                    The Ohio Christian Men's Fellowship is an event, offering 
-                    a variety of outdoor activities. There is something for everyone, from individual tournaments
-                    to group competitions to activities just for fun. These events provide an opportunity to meet 
-                    and socialize with other church members while enjoying the great outdoors.
-                </Paragraph>
-                <List 
-                    primaryKey="name"
-                    secondaryKey="link"
-                    data={[
-                        { name: <Text>Fishing Tournament</Text>, link: <Link to="#fishing" toText="More Info" /> },
-                        { name: <Text>Cornhole Tournament</Text>, link: <Link to="#cornhole" toText="More Info" /> },
-                        { name: <Text>Horseshoes Tournament</Text>, link: <Link to="#horseshoes" toText="More Info" /> },
-                    ]}
-                />
-            </Box>
+            <Heading level="4">Activities</Heading>
+            <Paragraph>
+                The Ohio Christian Men's Fellowship is an event, offering 
+                a variety of outdoor activities. There is something for everyone, from individual tournaments
+                to group competitions to activities just for fun. These events provide an opportunity to meet 
+                and socialize with other church members while enjoying the great outdoors.
+            </Paragraph>
         </Box>
-        <Box align="center" pad="small">
+        {/* <Box align="center" pad="small">
             <Box width="100%">
                 <Heading level="4">Other Activities</Heading>
                 <List 
@@ -42,23 +30,35 @@ const Activities = () => (
                     ]}
                 />
             </Box>
-        </Box>
+        </Box> */}
         <Card background="light-1">
-            <CardHeader pad="medium"><Image src={fishingImage} width="200px"/></CardHeader>
-            <CardBody pad="medium">
-                <Text>Fishing Tournament</Text>
-                <Paragraph>
-                    The fishing tournament at the Ohio Christian Men's Fellowship is fun for all ages. 
-                    The tournament gives you time to make memories with others who love 
-                    fishing just as much as you. We will be fishing for catfish, bluegill, bass, etc. 
-                    Prizes will be given out at the tournament. There will also be open fishing for anyone on 
-                    during recreational time. So if you enjoy fishing, take advantage of this 
-                    opportunity to reel in that big fish before the summer ends.
-                </Paragraph>
-                <Paragraph>
-                    Fishing will take place at Camp Lebanon from 4 PM to 8 PM Friday. Open fishing will be on Saturday during recreational time.
-                    For more information about this event you can call Carl Levine at <a href="tel:+19372320064">937-232-0064</a>.
-                </Paragraph>
+            <CardHeader>
+                <Stack anchor="center">
+                    <Image src={fishingImage} fill/>
+                    <Box align="center" pad="none" width="100vw">
+                        <Text>Fishing Tournament</Text>
+                    </Box>
+                </Stack>
+            </CardHeader>
+            <CardBody>
+            <Accordion>
+                <AccordionPanel label="Details">
+                    <Box pad="medium" background="light-2">
+                        <Paragraph>
+                            The fishing tournament at the Ohio Christian Men's Fellowship is fun for all ages. 
+                            The tournament gives you time to make memories with others who love 
+                            fishing just as much as you. We will be fishing for catfish, bluegill, bass, etc. 
+                            Prizes will be given out at the tournament. There will also be open fishing for anyone on 
+                            during recreational time. So if you enjoy fishing, take advantage of this 
+                            opportunity to reel in that big fish before the summer ends.
+                        </Paragraph>
+                        <Paragraph>
+                            Fishing will take place at Camp Lebanon from 4 PM to 8 PM Friday. Open fishing will be on Saturday during recreational time.
+                            For more information about this event you can call Carl Levine at <a href="tel:+19372320064">937-232-0064</a>.
+                        </Paragraph>
+                    </Box>
+                </AccordionPanel>
+            </Accordion>
             </CardBody>
         </Card>
 

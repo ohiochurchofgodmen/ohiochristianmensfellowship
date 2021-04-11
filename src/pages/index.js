@@ -7,10 +7,10 @@ const IndexPage = () => {
 	return (
 		<StaticQuery
 			query={graphql`
-			query testimonialsQuery {
-				site {
-					siteMetadata {
-						testimonials {
+			query allTestimonialsQuery {
+				allTestimonialsJson {
+					edges {
+						node {
 							author
 							quote
 						}

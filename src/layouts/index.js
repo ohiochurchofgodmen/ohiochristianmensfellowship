@@ -2,10 +2,9 @@ import React from 'react';
 import { Grommet, Footer, Text, Main, Header, Nav, ResponsiveContext, Box, Layer, Button, Image, Stack, Heading } from 'grommet';
 import { Home as HomeIcon , Menu as MenuIcon, Attraction as AttractionIcon, Group as GroupIcon, Directions as DirectionsIcon, Contact as ContactIcon, Currency as CurrencyIcon} from 'grommet-icons';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, navigate } from 'gatsby';
 import styled from "styled-components";
 
-import Link from '../components/link';
 import logo from "../images/logo.png";
 import mastHeadImg from '../images/2020_event.jpg';
 
@@ -455,7 +454,7 @@ const theme = {
   "scale": 1
 };
 
-const StyledNavLink = styled(Link)`
+const StyledNavLink = styled(Button)`
   color: inherit;
   text-decoration: none;
   margin-bottom: 20px;
@@ -478,27 +477,45 @@ const Layout = ({ children, showHeader }) => {
 
   const MainNav = ({data, direction}) => (
     <Nav direction={direction} fill>
-      <StyledNavLink to="/">
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate("/");
+      }}>
         <HomeIcon color="brand"/>
         <StyledNavText>Home</StyledNavText>
       </StyledNavLink>
-      <StyledNavLink to="/activities">
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate("/activities");
+      }}>
         <AttractionIcon color="brand"/>
         <StyledNavText>Activities</StyledNavText>
       </StyledNavLink>
-      <StyledNavLink to="/speakers">
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate("/speakers");
+      }}>
         <GroupIcon color="brand" />
         <StyledNavText>Speakers</StyledNavText>
       </StyledNavLink>
-      <StyledNavLink to="https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831">
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate("https://www.google.com/maps/dir//Camp+Lebanon+Retreat+Center,+4464+Emmons+Rd,+Oregonia,+OH+45054/@39.4442621,-84.186648,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8840f26c0df4b0a7:0x6b20972cafa62441!2m2!1d-84.1166079!2d39.4442831");
+      }}>
         <DirectionsIcon color="brand"/>
         <StyledNavText>Directions</StyledNavText>
       </StyledNavLink>
-      <StyledNavLink to="/contactus">
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate("/contactus");
+      }}>
         <ContactIcon color="brand"/>
         <StyledNavText>Contact Us</StyledNavText>
       </StyledNavLink>
-      <StyledNavLink to={data.donations}>
+      <StyledNavLink onClick={(e) => {
+        e.preventDefault();
+        navigate(data.donations);
+      }}>
         <CurrencyIcon color="brand"/>
         <StyledNavText>Give</StyledNavText>
       </StyledNavLink>
