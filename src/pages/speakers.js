@@ -1,5 +1,5 @@
 import React from "react";
-import { Paragraph, Heading, Box, List, Text, Image } from 'grommet';
+import { Paragraph, Heading, Box, Avatar } from 'grommet';
 import Layout from '../layouts';
 import speakerImage from "../images/speakers/2020/dr-mark-jackson.png";
 import musicImage from "../images/music/2020/SOQT.jpeg";
@@ -12,7 +12,7 @@ const Speakers = () => (
                 <Heading level="4">2020 Speaker</Heading>
                 <Heading level="5">Dr. Mark R. Jackson</Heading>
                 <Box>
-                    <Image src={speakerImage} alt="Dr. Mark R. Jackson" className="current-speaker"/>
+                    <Avatar src={speakerImage} alt="Dr. Mark R. Jackson" size="5xl"/>
                 </Box>
                 <Box>
                     <Paragraph>
@@ -44,7 +44,7 @@ const Speakers = () => (
                 <Heading level="4">2020 Music/Worship</Heading>
                 <Heading level="5">Sould Out Quartet</Heading>
                 <Box>
-                    <Image src={musicImage} alt="Sould Out Quartet" className="current-special-music" />
+                    <Avatar src={musicImage} alt="Sould Out Quartet" size="5xl"/>
                 </Box>
                 <Box>
                     <Paragraph>
@@ -70,19 +70,6 @@ const Speakers = () => (
                     </Paragraph>
                 </Box>
             </Box>
-        </Box>
-        <Box as="section">
-            <Heading level="4">Future Speakers/Music</Heading>
-
-            <Heading level="5">2021</Heading>
-            <List
-                primaryKey="name"
-                data={[
-                    { name: <Text>Dates: TBD</Text> },
-                    { name: <Text>Speaker: TBD</Text>},
-                    { name: <Text>Music/Worship: TBD</Text> },
-                ]}
-            />
         </Box>
     </Layout>
 );
