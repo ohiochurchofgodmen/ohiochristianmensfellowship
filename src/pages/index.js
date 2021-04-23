@@ -17,7 +17,7 @@ const IndexPage = () => {
 			}
 			`}
 			render={data => (
-				<Layout showHeader>
+				<Layout showHeader showRegisterButton>
 					<Box forwadedAs="section" height="medium" overflow="hidden" background="dark-1" pad="20px" fill="horizontal">
 						<Carousel fill controls="arrows" play={8000}>
 							{data.allTestimonialsJson.nodes.map((testimony) => (

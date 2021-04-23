@@ -1,13 +1,13 @@
 import React from 'react';
 import { Paragraph, Heading, Box, Text, Card, CardHeader, CardBody, Image, Accordion, AccordionPanel, Stack, Grid } from 'grommet';
 import Layout from '../layouts';
-import fishingImage from '../images/fishing_at_camp_2020.jpg';
-import cornholeImage from '../images/cornhole_at_camp_2020.jpg';
-import horseshoesImage from '../images/horseshoes_at_camp_2020.jpg';
-import golfImage from '../images/activities/golf/2014/MARK BALL AND PUTTER DSC_9238.jpg';
-import archeryImage from '../images/archery_at_camp_2020.jpg';
-import frisbeeGolfImage from '../images/frisebee_golf_at_camp_2020.jpg';
-import otherActivitiesImage from '../images/camp_pic_2020.jpg';
+import fishingImage from '../images/activities/fishing/fishing_at_camp_2020.jpg';
+import cornholeImage from '../images/activities/cornhole/cornhole_at_camp_2020.jpg';
+import horseshoesImage from '../images/activities/horseshoes/horseshoes_at_camp_2020.jpg';
+import golfImage from '../images/activities/golf/MARK BALL AND PUTTER DSC_9238.jpg';
+import archeryImage from '../images/activities/archery/archery_at_camp_2020.jpg';
+import frisbeeGolfImage from '../images/activities/frisebeeGolf/frisebee_golf_at_camp_2020.jpg';
+import hikingImage from '../images/activities/hiking/camp_pic_2020.jpg';
 import styled from "styled-components";
 
 const StyledOtherActivitiesHeader = styled(Box)`
@@ -25,16 +25,18 @@ const StyledAct2 = styled(Box)`
 `;
 
 const StyledAct3 = styled(Box)`
-    grid-column: 1/-1
+    grid-column: span 2;
+    grid-row: span 2;
 `;
 
 const StyledAct4 = styled(Box)`
-    grid-column: 1/-1
+    grid-column: 3 / span 2;
+    grid-row: span 2;
 `;
 
 const Activities = () => (
-    <Layout showHeader={false}>
-        <Box pad="small" fill>
+    <Layout showHeader={false} showRegisterButton>
+        <Box pad="20px" fill>
             <Heading level="3">Activities</Heading>
             <Paragraph fill>
                 The Ohio Christian Men's Fellowship is an event, offering 
@@ -43,7 +45,7 @@ const Activities = () => (
                 and socialize with other church members while enjoying the great outdoors.
             </Paragraph>
         </Box>
-        <Grid columns={{"count": "fit", "size": ["medium", "1fr"]}} gap="small" pad="small">
+        <Grid columns={{"count": "fit", "size": ["medium", "1fr"]}} gap="small" pad="20px">
             <Box>
                 <Card background="light-1">
                     <CardHeader>
@@ -60,11 +62,13 @@ const Activities = () => (
                                 <Box pad="medium" background="light-2">
                                     <Paragraph>
                                         The golf tournament at the Ohio Christian Men's Fellowship can be a great chance to get away from your work week and relax. 
-                                        Join in with others to play 18-holes of golf. Swap golf tips and stories, as you play your way through 
+                                        Join in with others to play an 18-holes of scramble tournament. Swap golf tips and stories, as you play your way through 
                                         a golf course that has something to offer every skill level.
                                     </Paragraph>
                                     <Paragraph>
-                                        We welcome all golfers, singles, twosome, threesomes, and of course 4-somes. Play is a 4-man scramble. For more information about this event you can call Les Bowers at <a href="tel:+15133200057">513-320-0057</a>
+                                        Golf will be held at 1223 N. State Rt. 741 Lebanon Ohio 45036. 
+                                        All golfers should be at the course by 10:30AM for an 11AM start time on September 10th. 
+                                        For more information about this event you can call Rusty Alward at <a href="mailto:rfalward@gmail.com">rfalward@gmail.com</a>.
                                     </Paragraph>
                                 </Box>
                             </AccordionPanel>
@@ -169,16 +173,18 @@ const Activities = () => (
             pad="small"
             fill
             >
-            <StyledOtherActivitiesHeader>
+            <StyledOtherActivitiesHeader background="dark-2">
                 <Stack anchor="center">
-                    <Image src={otherActivitiesImage} fill="horizontal"/>
+                    {/* <Image src={hikingImage} fill="horizontal"/> */}
                     <Box align="center" pad="none" width="100vw">
                         <Heading level="4" color="light-1" size="xl">Other Activities</Heading>
                     </Box>
                 </Stack>
             </StyledOtherActivitiesHeader>
             <StyledAct1 background="light-5">
-                <Text>Paddle Boating/Kayaking</Text>
+                <Box align="center" pad="none" width="100vw">
+                    <Text color="light-1" size="xl">Paddle Boating/Kayaking</Text>
+                </Box>
             </StyledAct1>
             <StyledAct2>
                 <Stack anchor="center">
@@ -188,8 +194,13 @@ const Activities = () => (
                     </Box>
                 </Stack>
             </StyledAct2>
-            <StyledAct3 background="light-2">
-                <Text>Hiking</Text>
+            <StyledAct3>
+                <Stack anchor="center">
+                    <Image src={hikingImage} fill/>
+                    <Box align="center" pad="none" width="100vw">
+                        <Text color="light-1" size="xl">Hiking</Text>
+                    </Box>
+                </Stack>
             </StyledAct3>
             <StyledAct4 >
                 <Stack anchor="center">

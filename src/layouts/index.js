@@ -472,7 +472,7 @@ const StyledNavText = styled(Text)`
   margin: 0 10px;
 `;
 
-const Layout = ({ children, showHeader }) => {
+const Layout = ({ children, showHeader, showRegisterButton }) => {
   const [openNav, setOpenNav] = React.useState();
 
   const MainNav = ({data, direction}) => (
@@ -496,7 +496,7 @@ const Layout = ({ children, showHeader }) => {
         navigate("/speakers");
       }}>
         <GroupIcon color="brand" />
-        <StyledNavText>Speakers</StyledNavText>
+        <StyledNavText>Speakers/Music</StyledNavText>
       </StyledNavLink>
       <StyledNavLink onClick={(e) => {
         e.preventDefault();
@@ -504,13 +504,6 @@ const Layout = ({ children, showHeader }) => {
       }}>
         <DirectionsIcon color="brand"/>
         <StyledNavText>Directions</StyledNavText>
-      </StyledNavLink>
-      <StyledNavLink onClick={(e) => {
-        e.preventDefault();
-        navigate("/contactus");
-      }}>
-        <ContactIcon color="brand"/>
-        <StyledNavText>Contact Us</StyledNavText>
       </StyledNavLink>
       <StyledNavLink onClick={(e) => {
         e.preventDefault();
@@ -587,9 +580,11 @@ const Layout = ({ children, showHeader }) => {
             </Stack>
             <Box align="center" justify="center" height={{"min": "unset"}} width={{"min": "unset"}}>
               {children}
-              <Text>
-                Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17
-              </Text>
+              <Box pad="20px">
+                <Text >
+                  Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs 27:17
+                </Text>
+              </Box>
             </Box>
               { openNav && 
                 (
@@ -614,18 +609,28 @@ const Layout = ({ children, showHeader }) => {
                   </Layer>
                 )
               }
-            {/* <Layer
-              open
-              position="bottom"
-              modal={false}
-              responsive={false}
-              full="horizontal"
-              background="brand"
-            >
-              <Box flex align="center" justify="center">
-                <Link to="/registration">Register</Link>
-              </Box>
-            </Layer> */}
+              { showRegisterButton &&
+                (
+                  <Layer
+                    open
+                    position="bottom"
+                    modal={false}
+                    responsive={false}
+                    full="horizontal"
+                    background="brand"
+                  >
+                    <Box flex align="center" justify="center">
+                        <Button onClick={(e) => {
+                        e.preventDefault();
+                        navigate("/registration");
+                      }}>
+                        Register
+                      </Button>
+                    </Box>
+                  </Layer>
+                )
+              }
+
           </Main>
           <Footer background="dark-1" pad="medium">
 
