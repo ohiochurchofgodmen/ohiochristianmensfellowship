@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
   Grommet,
   Footer,
@@ -28,7 +28,7 @@ import {
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, navigate } from 'gatsby'
 import styled from 'styled-components'
-import { Waypoint } from 'react-waypoint';
+import { Waypoint } from 'react-waypoint'
 
 import logo from '../images/logo.png'
 import mastHeadImg from '../images/2020_event.jpg'
@@ -505,8 +505,10 @@ const StyledScriptureText = styled(Text)`
   font-style: italic;
 `
 const Layout = ({ children, showHeader, showRegisterButton }) => {
-  const [openNav, setOpenNav] = useState();
-  const [displayRegisterButton, setDisplayRegisterButton] = useState(showRegisterButton);
+  const [openNav, setOpenNav] = useState()
+  const [displayRegisterButton, setDisplayRegisterButton] = useState(
+    showRegisterButton
+  )
 
   const MainNav = ({ data, direction }) => (
     <Nav direction={direction} fill>
@@ -636,7 +638,7 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
                 {showHeader && (
                   <>
                     <Heading level="2" margin="0" color="light-1">
-                      A New Begining
+                      Forged and Refined
                     </Heading>
                     <Heading level="3" margin="0" color="light-1">
                       September 10th &amp; 11th 2021
@@ -657,10 +659,11 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
                 onLeave={() => setDisplayRegisterButton(true)}
                 topOffset="-20%"
               />
-              <Box pad="medium" height={{min: "inherit"}}>
+              <Box pad="medium" height={{ min: 'inherit' }}>
                 <StyledScriptureText>
-                  Iron Sharpens Iron, so one man sharpens another.” ~ Proverbs
-                  27:17
+                  {`"For the word of God is quick, and powerful, and sharper than any two-
+edged sword, piercing even to the dividing asunder of soul and spirit, and of the
+joints and marrow, and is a discerner of the thoughts and intents of the heart.” ~ Hebrews 4:12`}
                 </StyledScriptureText>
               </Box>
             </Box>
@@ -694,7 +697,11 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
                 full="horizontal"
                 background="brand"
               >
-                <StyledRegisterButtonWrapper flex align="center" justify="center">
+                <StyledRegisterButtonWrapper
+                  flex
+                  align="center"
+                  justify="center"
+                >
                   <Button
                     onClick={(e) => {
                       e.preventDefault()
@@ -710,11 +717,25 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
           </Main>
           {!displayRegisterButton && (
             <Footer background="dark-1" pad="medium">
-              <Nav direction="row" background="brand" pad="medium" fill align="center" justify="center" round>
-                <Button href="https://www.facebook.com/ohiochristianmensfellowship/" margin={{right: "small"}}>
+              <Nav
+                direction="row"
+                background="brand"
+                pad="medium"
+                fill
+                align="center"
+                justify="center"
+                round
+              >
+                <Button
+                  href="https://www.facebook.com/ohiochristianmensfellowship/"
+                  margin={{ right: 'small' }}
+                >
                   <FacebookIcon />
                 </Button>
-                <Button href="https://www.instagram.com/ohio_christian_mens_fellowship/" margin={{right: "small"}}>
+                <Button
+                  href="https://www.instagram.com/ohio_christian_mens_fellowship/"
+                  margin={{ right: 'small' }}
+                >
                   <InstagramIcon />
                 </Button>
                 <Button href="mailto:ohiochristianmensfellowship@gmail.com">
