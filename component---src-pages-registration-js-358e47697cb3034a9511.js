@@ -1,0 +1,2 @@
+(self.webpackChunkohio_christian_mens_fellowship=self.webpackChunkohio_christian_mens_fellowship||[]).push([[497],{5138:function(e,t,i){"use strict";i.r(t);var r=i(7294),s=i(1524);t.default=function(){return r.createElement(s.Z,{showHeader:!1,showRegisterButton:!1},r.createElement("iframe",{src:"https://ohiochristianmensfellowship.brushfire.com/events/503712?iframe=True",title:"registration",width:"100%",height:"300",style:{border:"none",margin:"auto"}}))}}}]);
+//# sourceMappingURL=component---src-pages-registration-js-358e47697cb3034a9511.js.map
