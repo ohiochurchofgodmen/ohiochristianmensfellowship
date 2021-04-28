@@ -4,7 +4,8 @@ import Layout from '../layouts'
 import speakerImage from '../images/speakers/pete_winkler.jpeg'
 import speakerImage2 from '../images/speakers/woody.jpg'
 import musicImage from '../images/music/townesmen.jpg'
-import placeholderImage from '../images/placeholder-person.png'
+import musicImage2 from '../images/music/Casey_Liston.png'
+// import placeholderImage from '../images/placeholder-person.png'
 
 const Speakers = () => (
   <Layout showHeader={false} showRegisterButton>
@@ -13,7 +14,7 @@ const Speakers = () => (
     </Box>
     <Tabs pad="medium" fill>
       <Tab title="Speakers">
-        <Box elevation="medium" round pad="20px" margin="20px" align="center">
+        <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">
             {`Pete Winkler (History Channel Forged in Fire Champion)`}
           </Heading>
@@ -37,7 +38,7 @@ const Speakers = () => (
             given to share His Love and His Word.`}
           </Paragraph>
         </Box>
-        <Box elevation="medium" round pad="20px" margin="20px" align="center">
+        <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">{`Rev. Woodrow Wilson`}</Heading>
           <Avatar src={speakerImage2} alt="Rev. Woodrow Wilson" size="5xl" />
           <Paragraph>
@@ -54,7 +55,7 @@ const Speakers = () => (
         </Box>
       </Tab>
       <Tab title="Musicans">
-        <Box elevation="medium" round pad="20px" margin="20px" align="center">
+        <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">{`Townsman Quartet`}</Heading>
           <Avatar src={musicImage} alt="Townsman Quartet" size="5xl" />
           <Paragraph>
@@ -65,9 +66,23 @@ const Speakers = () => (
             one serving as a senior pastor.`}
           </Paragraph>
         </Box>
-        <Box elevation="medium" round pad="20px" margin="20px" align="center">
+        <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">{`Casey Liston`}</Heading>
-          <Avatar src={placeholderImage} alt="Casey Liston" size="5xl" />
+          <Avatar src={musicImage2} alt="Casey Liston" size="5xl" />
+          <Paragraph>
+            {`I am honored and so excited to be bringing music and leading worship this year at the Ohio Christian Men’s Fellowship!`}
+          </Paragraph>
+          <Paragraph>
+            {`I was raised in a preacher's home, and I have always been a part of worship in some way. As a kid, my family would gather around and we would sing hymns 
+            of faith for hours! I grew up learning how to sing from my mother. She would spend hours forcing us kids to sing and would critique us when we messed up.
+            At the age of 11, I came to know Christ as my savior. I began learning how to play various instruments and began getting involved in our church worship band. 
+            As my talent grew so did my heart for worship and for Christ. I have spent time leading at multiple churches over the years, as well as travelling 
+            with a contemporary worship band. For the past 10 years I have attended Dayspring Church of God in Cincinnati, Ohio where I continue to 
+            lead and be a part of our worship ministry. I met the love of my life Sarah at Dayspring and we have been married for 5 years. 
+            God blessed me with two beautiful children Levi (3), and Lorelai (2). I absolutely love all styles and types of worship music. 
+            My heart and goal is to give all the honor and praise that is due to our Lord and Savior Jesus Christ. Again I am so excited to be a 
+            part of this great fellowship and I look forward to what God has in store for us.`}
+          </Paragraph>
         </Box>
       </Tab>
     </Tabs>
