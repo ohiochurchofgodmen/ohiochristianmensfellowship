@@ -32,6 +32,7 @@ import { Waypoint } from 'react-waypoint'
 
 import logo from '../images/logo.png'
 import mastHeadImg from '../images/2020_event.jpg'
+import styles from './global.module.css'
 
 //Can't import theme
 const theme = {

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Paragraph, Heading, Box, Carousel, Text } from 'grommet'
+import { Paragraph, Heading, Box, Carousel, Text, Image, Button } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
+import raffleImage from '../images/knife_for_raffle.jpeg'
 
 const IndexPage = () => {
   return (
@@ -10,7 +11,7 @@ const IndexPage = () => {
         query allTestimonialsQuery {
           allTestimonialsJson {
             nodes {
-			  id
+              id
               author
               quote
             }
@@ -48,6 +49,17 @@ const IndexPage = () => {
                 </Box>
               ))}
             </Carousel>
+          </Box>
+          <Box pad="medium" align="center">
+            <Heading level="3">
+              Cross Knife Raffle: Made By Forged In Fire Champion Pete Winkler
+            </Heading>
+            <Image src={raffleImage} margin={{bottom: "small"}}/>
+            <Button
+              primary
+              label="Buy raffle tickets"
+              href="https://go.rallyup.com/ocmf"
+            />
           </Box>
           <Box forwardedAs="section" pad="medium">
             <Heading level="3">Our Story</Heading>
