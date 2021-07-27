@@ -3,6 +3,7 @@ import { Paragraph, Heading, Box, Carousel, Text, Image, Button } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
 import raffleImage from '../images/knife_for_raffle.jpeg'
+import golfDocument from '../docs/mens_golf_info.pdf'
 
 const IndexPage = () => {
   return (
@@ -49,6 +50,11 @@ const IndexPage = () => {
                 </Box>
               ))}
             </Carousel>
+          </Box>
+          <Box pad="medium" align="center">
+            <Paragraph fill>
+              If you plan to participate in the golf scramble, please open the attached document. <a href={`${golfDocument}`} target="_blank" rel="noreferrer">Golf Attachment</a>
+            </Paragraph>
           </Box>
           <Box pad="medium" align="center">
             <Heading level="3">
