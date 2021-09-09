@@ -1,9 +1,10 @@
 import React from 'react'
-import { Paragraph, Heading, Box, Carousel, Text, Image, Button } from 'grommet'
+import { Paragraph, Heading, Box, Carousel, Text, Image, Button, Anchor } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
 import raffleImage from '../images/knife_for_raffle.jpeg'
 import golfDocument from '../docs/mens_golf_info.pdf'
+import councilImage from '../images/council_img.jpg'
 
 const IndexPage = () => {
   return (
@@ -51,6 +52,11 @@ const IndexPage = () => {
               ))}
             </Carousel>
           </Box>
+          <Box pad="medium" align="center" margin={{top: "medium"}}>
+            <Anchor href="/schedule">
+              Click Here For Event Schedule!
+            </Anchor>
+          </Box>
           <Box pad="medium" align="center">
             <Paragraph fill>
               If you plan to participate in the golf scramble, please open the attached document. <a href={`${golfDocument}`} target="_blank" rel="noreferrer">Golf Attachment</a>
@@ -62,13 +68,16 @@ const IndexPage = () => {
             </Heading>
             <Image src={raffleImage} margin={{bottom: "small"}}/>
             <Button
-              primary
+              as="a"
               label="Buy raffle tickets"
               href="https://go.rallyup.com/ocmf"
             />
           </Box>
           <Box forwardedAs="section" pad="medium">
             <Heading level="3">Our Story</Heading>
+              <Box width="medium">
+                <Image src={councilImage} fit="contain"/>
+              </Box>
             <Paragraph fill>
               {`When the Ohio Church of God Men's ministry began in 1976, the
               members had a vision for all men in Ohio. They would seek to live
