@@ -75,8 +75,8 @@ const IndexPage = () => {
           </Box>
           <Box forwardedAs="section" pad="medium">
             <Heading level="3">Our Story</Heading>
-            <Box width="small" pad="none" margin="none">
-              <Image src={councilImage} fit="cover"/>
+            <Box width="medium" height="medium" pad="none" margin="none">
+              <Image src={councilImage} fit="cover" pad="none" margin="none"/>
             </Box>
             <Paragraph fill>
               {`When the Ohio Church of God Men's ministry began in 1976, the

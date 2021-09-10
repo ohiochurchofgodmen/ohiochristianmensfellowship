@@ -5,8 +5,8 @@ import scheduleImage from '../images/OCMF schedule of events 2021.png'
 
 const Schedule = () => (
   <Layout showHeader={false} showRegisterButton={false}>
-      <Box width="small" pad="none" margin="none">
-        <Image src={scheduleImage} fit="cover"/>
+      <Box width="medium" pad="none" margin="none">
+        <Image src={scheduleImage} fit="contain"/>
       </Box>
   </Layout>
 )
