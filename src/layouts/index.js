@@ -641,7 +641,7 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
                       Forged and Refined
                     </Heading>
                     <Heading level="3" margin="0" color="light-1">
-                      September 10th &amp; 11th 2021
+                      September 9th &amp; 10th 2022
                     </Heading>
                   </>
                 )}

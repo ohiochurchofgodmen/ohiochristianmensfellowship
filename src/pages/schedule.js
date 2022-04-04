@@ -1,12 +1,11 @@
 import React from 'react'
 import Layout from '../layouts'
 import { Box, Image } from 'grommet'
-import scheduleImage from '../images/OCMF schedule of events 2021.png'
 
 const Schedule = () => (
   <Layout showHeader={false} showRegisterButton={false}>
       <Box width="medium" pad="none" margin="none">
-        <Image src={scheduleImage} fit="contain"/>
+        <Image src={""} fit="contain"/>
       </Box>
   </Layout>
 )

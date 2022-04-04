@@ -3,7 +3,7 @@ import { Paragraph, Heading, Box, Avatar, Tabs, Tab } from 'grommet'
 import Layout from '../layouts'
 import speakerImage from '../images/speakers/pete_winkler.jpeg'
 import speakerImage2 from '../images/speakers/woody.jpg'
-import musicImage from '../images/music/townesmen.jpg'
+import musicImage from '../images/music/GloryWay.jpeg'
 import musicImage2 from '../images/music/Casey_Liston.png'
 // import placeholderImage from '../images/placeholder-person.png'
 
@@ -56,14 +56,25 @@ const Speakers = () => (
       </Tab>
       <Tab title="Musicans">
         <Box elevation="medium" round pad="medium" margin="medium" align="center">
-          <Heading level="4">{`Townsman Quartet`}</Heading>
-          <Avatar src={musicImage} alt="Townsman Quartet" size="5xl" />
+          <Heading level="4">{`GloryWay Quartet`}</Heading>
+          <Avatar src={musicImage} alt="GloryWay Quartet" size="5xl" />
           <Paragraph>
-            {`The Townesmen is a group that has been in existence for many years.
-            Started by four laymen in a local church to sing for its services.
-            Now after 50 years the group is made up of four people who are long
-            time servants of the church, three serving as worship leaders, and
-            one serving as a senior pastor.`}
+            {`GloryWay was founded in Mansfield, Ohio by lead singer, Justin Crank. Raised on good old-fashion gospel music, Justin developed a love for four-part harmony.  
+            What began as four friends singing around town was blessed by God and has blossomed into a powerful full-time ministry. 
+            GloryWay has the privilege of working with several prestigious agencies in the world of Gospel Music entertainment. 
+            GloryWay is signed with Capitol Artists as one of their booking agents and is also on the Gateway Management label, a highly-respected management agency. 
+            GloryWay travels over 60,000 miles annually, all across the United States, sometimes booking engagements over a year in advance. 
+            Every weekend of the year, plus some, is packed full of exciting ministry opportunities for GloryWay. 
+            GloryWay songs can be heard on nationwide radio, including ‘Nobody’,  ‘God, You’re Amazing,’ and ‘End of the Story’. Many GloryWay fans have found comfort in ‘Just a Little While’, a ballad written by GloryWay’s own John Cole. 
+            All of these songs can be found on the most recent, groundbreaking project titled ‘God, You’re Amazing’. GloryWay has participated in numerous showcases at the National Quartet Convention.  
+            In 2016, they were a part of the American Gospel Celebration hosted by Pastor John Hagee.  
+            In 2017 and 2018, they were nominated for ‘Sunrise Quartet of the Year’ for SGN Scoops Diamond Awards, taking home the honor in 2018. 
+            GloryWay has also been named Southern Gospel Artist of the Year by Southern Gospel New York.  
+            They were honored guests on the nationally syndicated radio program “Paul Heil and the Gospel Greats” and they’ve presented their ministry at the Thomas Road Baptist Church in Lynchburg, Virginia. GloryWay has been honored to perform at Dollywood in Pigeon Forge, Tennessee many times over the years. 
+            They've been blessed to record in several studios with some elite producers and talented musicians who can be heard on the many projects that they have recorded, including a Christmas CD. 
+            GloryWay is made up of owner/ lead singer Justin Crank, tenor Bryan Langley, and baritone John Cole. 
+            GloryWay puts on a unique and versatile performance that blends classic four-part harmony with exciting and inspiring new sounds and styles. 
+            They look forward to each and every opportunity to share their ministry.  Each performance is sure to delight and encourage all who listen.`}
           </Paragraph>
         </Box>
         <Box elevation="medium" round pad="medium" margin="medium" align="center">

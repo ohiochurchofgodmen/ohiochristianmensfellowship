@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph, Heading, Box, Carousel, Text, Image, Button, Anchor } from 'grommet'
+import { Paragraph, Heading, Box, Carousel, Text, Image, Button } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
 import raffleImage from '../images/knife_for_raffle.jpeg'
@@ -52,11 +52,11 @@ const IndexPage = () => {
               ))}
             </Carousel>
           </Box>
-          <Box pad="medium" align="center" margin={{top: "medium"}}>
+          {/* <Box pad="medium" align="center" margin={{top: "medium"}}>
             <Anchor href="/schedule">
               Click Here For Event Schedule!
             </Anchor>
-          </Box>
+          </Box> */}
           <Box pad="medium" align="center">
             <Paragraph fill>
               If you plan to participate in the golf scramble, please open the attached document. <a href={`${golfDocument}`} target="_blank" rel="noreferrer">Golf Attachment</a>
