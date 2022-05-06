@@ -5,7 +5,7 @@ import speakerImage from '../images/speakers/pete_winkler.jpeg'
 import speakerImage2 from '../images/speakers/woody.jpg'
 import musicImage from '../images/music/GloryWay.jpeg'
 import musicImage2 from '../images/music/Casey_Liston.png'
-// import placeholderImage from '../images/placeholder-person.png'
+import placeholderImage from '../images/placeholder-person.png'
 
 const Speakers = () => (
   <Layout showHeader={false} showRegisterButton>
@@ -16,41 +16,18 @@ const Speakers = () => (
       <Tab title="Speakers">
         <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">
-            {`Pete Winkler (History Channel Forged in Fire Champion)`}
+            {`TBD`}
           </Heading>
-          <Avatar src={speakerImage} alt="Pete Winkler" size="5xl" />
+          <Avatar src={placeholderImage} alt="Main Speaker Image" size="5xl" />
           <Paragraph>
-            {`I was raised on a small farm in southeastern Wisconsin, In 1977 I
-            was born again as I watched the Billy Graham/ Johnny Cash Film
-            'Gospel Road'. I was delivered and washed from my sin and
-            addictions. I knew very soon after God had called me to proclaim His
-            Word and over the last 40 plus years I have served in a number of
-            church leadership/ pastoral roles. Most of those years I also ran a
-            fulltime home improvement business. I have been active in foreign
-            missions in Jamaica, Mexico, Guatamala, Kenya and South Sudan. In
-            2010. My wife Linda and I left the Upper Peninsula of Michigan to
-            care for her Mother in Sidney, OH. It was at that time I got started
-            with knifemaking and by the end of 2012 I was working full time in
-            it, making and selling our brand, "Cross Knives". It has been an
-            incredible time of following Jesus in the Marketplace and watching
-            His hand guide our steps. At 68 years old, I am excited as we walk
-            into the year ahead and see the opportunities and open doors we are
-            given to share His Love and His Word.`}
+            {`TBD`}
           </Paragraph>
         </Box>
         <Box elevation="medium" round pad="medium" margin="medium" align="center">
-          <Heading level="4">{`Rev. Woodrow Wilson`}</Heading>
-          <Avatar src={speakerImage2} alt="Rev. Woodrow Wilson" size="5xl" />
+          <Heading level="4">{`TBD`}</Heading>
+          <Avatar src={placeholderImage} alt="Secondary Speaker Image" size="5xl" />
           <Paragraph>
-            {`Rev. Woodrow Wilson has been pastoring for 44 years, the last 26 at
-            God's Community Outreach in Chillicothe. Rev. Wilson is a writer,
-            newspaper columnist (Words From Woody.), teacher, speaker and sports
-            official (45 years). He authored a book, "Dare to Believe." He
-            participated in the Veterans History Project which is part of the
-            Library of Congress, and become part of their permanent collection.
-            "Pastor Woody" and wife Trish were married four days short of 51
-            years. They have three children: Rev. Matthew Wilson, Rev. Latisha
-            (Lollie) Knight and Jeremiah (JP) Wilson.`}
+            {`TBD`}
           </Paragraph>
         </Box>
       </Tab>

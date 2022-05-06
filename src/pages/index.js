@@ -1,8 +1,8 @@
 import React from 'react'
-import { Paragraph, Heading, Box, Carousel, Text, Image, Button } from 'grommet'
+import { Paragraph, Heading, Box, Carousel, Text, Image } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../layouts'
-import raffleImage from '../images/knife_for_raffle.jpeg'
+// import raffleImage from '../images/knife_for_raffle.jpeg'
 import golfDocument from '../docs/mens_golf_info.pdf'
 import councilImage from '../images/council_img.jpg'
 
@@ -57,12 +57,12 @@ const IndexPage = () => {
               Click Here For Event Schedule!
             </Anchor>
           </Box> */}
-          <Box pad="medium" align="center">
+          {/* <Box pad="medium" align="center">
             <Paragraph fill>
               If you plan to participate in the golf scramble, please open the attached document. <a href={`${golfDocument}`} target="_blank" rel="noreferrer">Golf Attachment</a>
             </Paragraph>
-          </Box>
-          <Box pad="medium" align="center">
+          </Box> */}
+          {/* <Box pad="medium" align="center">
             <Heading level="3">
               Cross Knife Raffle: Made By Forged In Fire Champion Pete Winkler
             </Heading>
@@ -72,7 +72,7 @@ const IndexPage = () => {
               label="Buy raffle tickets"
               href="https://go.rallyup.com/ocmf"
             />
-          </Box>
+          </Box> */}
           <Box forwardedAs="section" pad="medium">
             <Heading level="3">Our Story</Heading>
             <Box width="medium" height="medium" pad="none" margin="none">

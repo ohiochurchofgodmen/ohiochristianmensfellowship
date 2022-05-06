@@ -638,7 +638,7 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
                 {showHeader && (
                   <>
                     <Heading level="2" margin="0" color="light-1">
-                      Forged and Refined
+                      Get Out Of The Boat
                     </Heading>
                     <Heading level="3" margin="0" color="light-1">
                       September 9th &amp; 10th 2022
@@ -661,9 +661,17 @@ const Layout = ({ children, showHeader, showRegisterButton }) => {
               />
               <Box pad="medium" height={{ min: 'inherit' }}>
                 <StyledScriptureText>
-                  {`"For the word of God is quick, and powerful, and sharper than any two-
-edged sword, piercing even to the dividing asunder of soul and spirit, and of the
-joints and marrow, and is a discerner of the thoughts and intents of the heart.” ~ Hebrews 4:12`}
+                  {`"23 After he had dismissed them, he went up on a mountainside by himself to pray. Later that night, he was there alone, 
+                  24 and the boat was already a considerable distance from land, buffeted by the waves because the wind was against it.
+                  25 Shortly before dawn Jesus went out to them, walking on the lake. 
+                  26 When the disciples saw him walking on the lake, they were terrified. “It’s a ghost,” they said, and cried out in fear.
+                  27 But Jesus immediately said to them: “Take courage! It is I. Don’t be afraid.” 
+                  28 “Lord, if it’s you,” Peter replied, “tell me to come to you on the water.” 
+                  29 “Come,” he said. Then Peter got down out of the boat, walked on the water and came toward Jesus. 
+                  30 But when he saw the wind, he was afraid and, beginning to sink, cried out, “Lord, save me!”
+                  31 Immediately Jesus reached out his hand and caught him. “You of little faith,” he said, “why did you doubt?” 
+                  32 And when they climbed into the boat, the wind died down. 
+                  33 Then those who were in the boat worshiped him, saying, “Truly you are the Son of God.”” ~ Matthew 14: 23-33`}
                 </StyledScriptureText>
               </Box>
             </Box>
@@ -705,7 +713,7 @@ joints and marrow, and is a discerner of the thoughts and intents of the heart.�
                   <Button
                     onClick={(e) => {
                       e.preventDefault()
-                      navigate('/registration')
+                      navigate('https://brushfire.com/ohiochristianmensfellowship/events/532628/tickets')
                     }}
                     fill
                   >
