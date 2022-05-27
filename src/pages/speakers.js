@@ -1,7 +1,7 @@
 import React from 'react'
 import { Paragraph, Heading, Box, Avatar, Tabs, Tab } from 'grommet'
 import Layout from '../layouts'
-import speakerImage from '../images/speakers/pete_winkler.jpeg'
+import speakerImage from '../images/speakers/bob_hawker.jpeg'
 import speakerImage2 from '../images/speakers/woody.jpg'
 import musicImage from '../images/music/GloryWay.jpeg'
 import musicImage2 from '../images/music/Casey_Liston.png'
@@ -16,11 +16,16 @@ const Speakers = () => (
       <Tab title="Speakers">
         <Box elevation="medium" round pad="medium" margin="medium" align="center">
           <Heading level="4">
-            {`TBD`}
+            {`Bob Hawker`}
           </Heading>
-          <Avatar src={placeholderImage} alt="Main Speaker Image" size="5xl" />
+          <Avatar src={speakerImage} alt="Main Speaker Image" size="5xl" />
           <Paragraph>
-            {`TBD`}
+            {`Bob Hawker currently serves as an Associate Pastor at Salem Church of God in Clayton Ohio. 
+            Bob is married to his with Alison who is an Elementary PE teacher and has 2 daughters Ansley and Aria. 
+            He has a desire to lead people to become Disciples who then make Disciples, and to see men of God leading their families, 
+            friends, and coworkers into new and deeper relationships with Jesus. Bob speaks with passion, excitement, and with real and 
+            practical examples that can help you take your next steps with Jesus. Bob loves to fish, play basketball, and enjoys all things outdoors. 
+            He loves growing green grass and believes dandelions are of the devil!`}
           </Paragraph>
         </Box>
         <Box elevation="medium" round pad="medium" margin="medium" align="center">
